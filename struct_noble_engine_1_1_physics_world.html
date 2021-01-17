@@ -20,8 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="dogge.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Noble Engine
+   &#160;<span id="projectnumber">Alpha 1.0</span>
    </div>
    <div id="projectbrief">A data oriented game engine. Designed for use in c++.</div>
   </td>
@@ -85,6 +87,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef480c119a1c3b26f5e23cc6d37a586d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472d6ee7a981b560469c40714fb88fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_physics_world.html#a472d6ee7a981b560469c40714fb88fd8">AddRigidbody</a> (btRigidBody *body)</td></tr>
 <tr class="separator:a472d6ee7a981b560469c40714fb88fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b6ea6000c1e952eb8a52e1a893df08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_physics_world.html#ad0b6ea6000c1e952eb8a52e1a893df08">RemoveRigidbody</a> (btRigidBody *body)</td></tr>
+<tr class="separator:ad0b6ea6000c1e952eb8a52e1a893df08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d698809f467e7639ccd54fc447c42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_physics_world.html#a72d698809f467e7639ccd54fc447c42e">StepSimulation</a> (double amount)</td></tr>
 <tr class="separator:a72d698809f467e7639ccd54fc447c42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -94,7 +98,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae531662c2afcc224370aa2c89215fa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores various options regarding the bullet physics. </p>
+<div class="textblock"><p>Stores various options regarding the bullet physics. Created by the engine on startup. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aef480c119a1c3b26f5e23cc6d37a586d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef480c119a1c3b26f5e23cc6d37a586d">&#9670;&nbsp;</a></span>AddCollider()</h2>
@@ -175,6 +179,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Creates a physics world object. </p>
+
+</div>
+</div>
+<a id="ad0b6ea6000c1e952eb8a52e1a893df08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b6ea6000c1e952eb8a52e1a893df08">&#9670;&nbsp;</a></span>RemoveRigidbody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NobleEngine::PhysicsWorld::RemoveRigidbody </td>
+          <td>(</td>
+          <td class="paramtype">btRigidBody *&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes a rigidbody from the physics world. </p>
 
 </div>
 </div>
