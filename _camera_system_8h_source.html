@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Noble Engine: src/NobleEngine/CameraSystem.h Source File</title>
+<title>Noble Engine: src/NobleEngine/Systems/CameraSystem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Noble Engine
-   &#160;<span id="projectnumber">Alpha 1.0</span>
+   &#160;<span id="projectnumber">Dissertation Version</span>
    </div>
    <div id="projectbrief">A data oriented game engine. Designed for use in c++.</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4df951cf01c2f435a965d8595ea4c3a6.html">NobleEngine</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4df951cf01c2f435a965d8595ea4c3a6.html">NobleEngine</a></li><li class="navelem"><a class="el" href="dir_e80ed2d8eac3b15d06918796f4a15e13.html">Systems</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,20 +71,19 @@ $(function() {
 <div class="title">CameraSystem.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;System.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera_system.html">   10</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_camera_system.html">CameraSystem</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_system.html">System</a>&lt;Camera&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_camera_system.html#a30dbe449a44b1c4694536b15c0cc0493">OnUpdate</a>(std::shared_ptr&lt;Camera&gt; comp);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_camera_system.html#a9f202c9beee53281e72049b8877b95c8">UpdateCameraView</a>(std::shared_ptr&lt;Camera&gt; cam);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../EngineCore/System.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../Components/Camera.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera_system.html">    9</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_camera_system.html">CameraSystem</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_system.html">System</a>&lt;Camera&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_camera_system.html#a30dbe449a44b1c4694536b15c0cc0493">OnUpdate</a>(std::shared_ptr&lt;Camera&gt; comp);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_camera_system.html#a9f202c9beee53281e72049b8877b95c8">UpdateCameraView</a>(std::shared_ptr&lt;Camera&gt; cam);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_noble_engine_1_1_camera_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_camera_system.html">NobleEngine::CameraSystem</a></div><div class="ttdef"><b>Definition:</b> CameraSystem.h:11</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_camera_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_camera_system.html">NobleEngine::CameraSystem</a></div><div class="ttdef"><b>Definition:</b> CameraSystem.h:10</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_system.html">NobleEngine::System</a></div><div class="ttdef"><b>Definition:</b> System.h:73</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_camera_system_html_a30dbe449a44b1c4694536b15c0cc0493"><div class="ttname"><a href="struct_noble_engine_1_1_camera_system.html#a30dbe449a44b1c4694536b15c0cc0493">NobleEngine::CameraSystem::OnUpdate</a></div><div class="ttdeci">void OnUpdate(std::shared_ptr&lt; Camera &gt; comp)</div><div class="ttdef"><b>Definition:</b> CameraSystem.cpp:14</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_camera_system_html_a9f202c9beee53281e72049b8877b95c8"><div class="ttname"><a href="struct_noble_engine_1_1_camera_system.html#a9f202c9beee53281e72049b8877b95c8">NobleEngine::CameraSystem::UpdateCameraView</a></div><div class="ttdeci">void UpdateCameraView(std::shared_ptr&lt; Camera &gt; cam)</div><div class="ttdef"><b>Definition:</b> CameraSystem.cpp:19</div></div>
