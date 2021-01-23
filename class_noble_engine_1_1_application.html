@@ -98,9 +98,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a519fe496c59ac79b42c462b9c222baa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec6f5b56e0c298f1e14972fdcf5e5b12"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_physics_world.html">PhysicsWorld</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#aec6f5b56e0c298f1e14972fdcf5e5b12">GetPhysicsWorld</a> ()</td></tr>
 <tr class="separator:aec6f5b56e0c298f1e14972fdcf5e5b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f2a2a059a6b2d2469bcc54ca2e93fc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a81f2a2a059a6b2d2469bcc54ca2e93fc"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a81f2a2a059a6b2d2469bcc54ca2e93fc">BindSystem</a> (std::shared_ptr&lt; T &gt; system)</td></tr>
-<tr class="separator:a81f2a2a059a6b2d2469bcc54ca2e93fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d744e6a49fbd5e91f4fab80da07818"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a01d744e6a49fbd5e91f4fab80da07818"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a01d744e6a49fbd5e91f4fab80da07818">BindSystem</a> (bool update, bool render)</td></tr>
+<tr class="separator:a01d744e6a49fbd5e91f4fab80da07818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b53c45c5a3dcc3a22beabbd1f2e7ae5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4b53c45c5a3dcc3a22beabbd1f2e7ae5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a4b53c45c5a3dcc3a22beabbd1f2e7ae5">BindSystem</a> (bool update, bool render, int amountOfComponentsPerThread)</td></tr>
+<tr class="separator:a4b53c45c5a3dcc3a22beabbd1f2e7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43a330e683da4dd5446371e9d5eeae2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa43a330e683da4dd5446371e9d5eeae2"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#aa43a330e683da4dd5446371e9d5eeae2">GetSystem</a> ()</td></tr>
 <tr class="separator:aa43a330e683da4dd5446371e9d5eeae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +123,8 @@ static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_camera.ht
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_noble_engine_1_1_application.html">Application</a> is the core of the engine. This will initialize and handle the main loop of the engine. This also stores a list of entities and systems. These will be used to create functionality of the engine. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a81f2a2a059a6b2d2469bcc54ca2e93fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81f2a2a059a6b2d2469bcc54ca2e93fc">&#9670;&nbsp;</a></span>BindSystem()</h2>
+<a id="a01d744e6a49fbd5e91f4fab80da07818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d744e6a49fbd5e91f4fab80da07818">&#9670;&nbsp;</a></span>BindSystem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,9 +137,19 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">static void NobleEngine::Application::BindSystem </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>system</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>render</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -146,6 +159,51 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Binds the system to the engine core for use in game functionality. Only one of each system type can be bound at a time. </p>
+
+</div>
+</div>
+<a id="a4b53c45c5a3dcc3a22beabbd1f2e7ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b53c45c5a3dcc3a22beabbd1f2e7ae5">&#9670;&nbsp;</a></span>BindSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void NobleEngine::Application::BindSystem </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>render</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amountOfComponentsPerThread</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Binds the system to the engine core for use in game functionality. Only one of each system type can be bound at a time. This sets it up with threading. </p>
 
 </div>
 </div>

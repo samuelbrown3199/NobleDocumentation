@@ -110,12 +110,26 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a113a4519aec81cc1b2a4ecc4aab59d54"><td class="memItemLeft" align="right" valign="top"><a id="a113a4519aec81cc1b2a4ecc4aab59d54"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkForPhysicsBody</b> = false</td></tr>
 <tr class="separator:a113a4519aec81cc1b2a4ecc4aab59d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bf74c70038dc9c849e2f9ef7b2aaf5"><td class="memItemLeft" align="right" valign="top"><a id="a70bf74c70038dc9c849e2f9ef7b2aaf5"></a>
+btTransform&#160;</td><td class="memItemRight" valign="bottom"><b>oldBodyPos</b></td></tr>
+<tr class="separator:a70bf74c70038dc9c849e2f9ef7b2aaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad959bc33aca6da8421483db5bde7170e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_transform.html#ad959bc33aca6da8421483db5bde7170e">parent</a></td></tr>
+<tr class="separator:ad959bc33aca6da8421483db5bde7170e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e579a9a1b788bd9f68693bde5c97ad4"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_transform.html#a9e579a9a1b788bd9f68693bde5c97ad4">position</a></td></tr>
 <tr class="separator:a9e579a9a1b788bd9f68693bde5c97ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6405dbc47dac368315a0f327584e4d7f"><td class="memItemLeft" align="right" valign="top"><a id="a6405dbc47dac368315a0f327584e4d7f"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>oldPosition</b></td></tr>
+<tr class="separator:a6405dbc47dac368315a0f327584e4d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a598e1a9bce134c1dc1d6ebf99a4aec2d"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_transform.html#a598e1a9bce134c1dc1d6ebf99a4aec2d">rotation</a></td></tr>
 <tr class="separator:a598e1a9bce134c1dc1d6ebf99a4aec2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece3138736d0109a13ba72527876f73e"><td class="memItemLeft" align="right" valign="top"><a id="aece3138736d0109a13ba72527876f73e"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>oldRotation</b></td></tr>
+<tr class="separator:aece3138736d0109a13ba72527876f73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a343f86ac6276a149b44597787f1b8a92"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_transform.html#a343f86ac6276a149b44597787f1b8a92">scale</a> = glm::vec3(1, 1, 1)</td></tr>
 <tr class="separator:a343f86ac6276a149b44597787f1b8a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ac919035adafc6fa8a2c5a16e4dd3a"><td class="memItemLeft" align="right" valign="top"><a id="a22ac919035adafc6fa8a2c5a16e4dd3a"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>oldScale</b></td></tr>
+<tr class="separator:a22ac919035adafc6fa8a2c5a16e4dd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab51adbbbc924154b852336829e40047f"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_transform.html#ab51adbbbc924154b852336829e40047f">model</a></td></tr>
 <tr class="separator:ab51adbbbc924154b852336829e40047f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_noble_engine_1_1_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_noble_engine_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_noble_engine_1_1_component_base.html">NobleEngine::ComponentBase</a></td></tr>
@@ -253,6 +267,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Contains the model matrix for use in rendering. </p>
+
+</div>
+</div>
+<a id="ad959bc33aca6da8421483db5bde7170e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad959bc33aca6da8421483db5bde7170e">&#9670;&nbsp;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="struct_noble_engine_1_1_transform.html">Transform</a>&gt; NobleEngine::Transform::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the parent transform of the object. </p>
 
 </div>
 </div>

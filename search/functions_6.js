@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['linkshaderprogram_190',['LinkShaderProgram',['../struct_noble_engine_1_1_shader_program.html#aac772d58119a46ea4071b5ceee523b25',1,'NobleEngine::ShaderProgram']]],
-  ['loadmaterial_191',['LoadMaterial',['../struct_noble_engine_1_1_resource_manager.html#a32dac05b229d3662f9cc3ad543ad90e3',1,'NobleEngine::ResourceManager']]],
-  ['loadogg_192',['LoadOgg',['../struct_noble_engine_1_1_audio_clip.html#a54943cca6759f48b6b7ff224c1b38a10',1,'NobleEngine::AudioClip']]],
-  ['loadresource_193',['LoadResource',['../struct_noble_engine_1_1_resource_manager.html#a0bdd759293886773e71350307f67f16f',1,'NobleEngine::ResourceManager']]]
+  ['jointhread_217',['JoinThread',['../struct_noble_engine_1_1_threading_manager.html#ac638ad71a9db64317ff1ab12fef49db3',1,'NobleEngine::ThreadingManager']]]
 ];

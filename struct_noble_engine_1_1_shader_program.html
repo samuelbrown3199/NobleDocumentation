@@ -83,12 +83,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02be52b5e69b05fc89619a9498922b63"><td class="memItemLeft" align="right" valign="top"><a id="a02be52b5e69b05fc89619a9498922b63"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ShaderProgram</b> (std::weak_ptr&lt; <a class="el" href="class_noble_engine_1_1_application.html">Application</a> &gt; app)</td></tr>
 <tr class="separator:a02be52b5e69b05fc89619a9498922b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa18e4292df74318a072ebca97d74ae"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#acaa18e4292df74318a072ebca97d74ae">GetLocation</a> (std::string location)</td></tr>
+<tr class="separator:acaa18e4292df74318a072ebca97d74ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6638d3a4169d00cda03d1826341a4d14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#a6638d3a4169d00cda03d1826341a4d14">BindShader</a> (std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_shader.html">Shader</a> &gt; shader, GLenum shaderType)</td></tr>
 <tr class="separator:a6638d3a4169d00cda03d1826341a4d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a315a02afda985a6fe440c83332c19b3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#a315a02afda985a6fe440c83332c19b3c">BindInt</a> (std::string location, int value)</td></tr>
 <tr class="separator:a315a02afda985a6fe440c83332c19b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaf8adff5d13ebb528d70a7096d8721d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#adaf8adff5d13ebb528d70a7096d8721d">BindMat4</a> (std::string location, glm::mat4 matrix)</td></tr>
 <tr class="separator:adaf8adff5d13ebb528d70a7096d8721d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764fed1f038540a438d8dc675207b05b"><td class="memItemLeft" align="right" valign="top"><a id="a764fed1f038540a438d8dc675207b05b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BindModelMat</b> (glm::mat4 matrix)</td></tr>
+<tr class="separator:a764fed1f038540a438d8dc675207b05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2bfa1f83d8936fb81f8ab2f206a0d2"><td class="memItemLeft" align="right" valign="top"><a id="a1c2bfa1f83d8936fb81f8ab2f206a0d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BindProjectionMat</b> (glm::mat4 matrix)</td></tr>
+<tr class="separator:a1c2bfa1f83d8936fb81f8ab2f206a0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259fab56bf56c146015c6addfec0178e"><td class="memItemLeft" align="right" valign="top"><a id="a259fab56bf56c146015c6addfec0178e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BindViewMat</b> (glm::mat4 matrix)</td></tr>
+<tr class="separator:a259fab56bf56c146015c6addfec0178e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac772d58119a46ea4071b5ceee523b25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#aac772d58119a46ea4071b5ceee523b25">LinkShaderProgram</a> ()</td></tr>
 <tr class="separator:aac772d58119a46ea4071b5ceee523b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a936be24bd87090177eeb876e7012a6dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_shader_program.html#a936be24bd87090177eeb876e7012a6dc">UseProgram</a> ()</td></tr>
@@ -102,6 +113,18 @@ std::weak_ptr&lt; <a class="el" href="class_noble_engine_1_1_application.html">A
 <tr class="memitem:a734d91b1bab8ea8df7329ece5fc49eda"><td class="memItemLeft" align="right" valign="top"><a id="a734d91b1bab8ea8df7329ece5fc49eda"></a>
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>programID</b></td></tr>
 <tr class="separator:a734d91b1bab8ea8df7329ece5fc49eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3683c805aa1222af11dd46b94b06d9"><td class="memItemLeft" align="right" valign="top"><a id="afc3683c805aa1222af11dd46b94b06d9"></a>
+GLint&#160;</td><td class="memItemRight" valign="bottom"><b>modelMatrixLoc</b></td></tr>
+<tr class="separator:afc3683c805aa1222af11dd46b94b06d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cb73826d43166e49a76f16568ff670"><td class="memItemLeft" align="right" valign="top"><a id="a26cb73826d43166e49a76f16568ff670"></a>
+GLint&#160;</td><td class="memItemRight" valign="bottom"><b>projectionMatrixLoc</b></td></tr>
+<tr class="separator:a26cb73826d43166e49a76f16568ff670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252afd6bdce58ace3dfecc3224a0efb8"><td class="memItemLeft" align="right" valign="top"><a id="a252afd6bdce58ace3dfecc3224a0efb8"></a>
+GLint&#160;</td><td class="memItemRight" valign="bottom"><b>viewMatrixLoc</b></td></tr>
+<tr class="separator:a252afd6bdce58ace3dfecc3224a0efb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9a2c0685cdb77dfc4485c18bd9bf6f"><td class="memItemLeft" align="right" valign="top"><a id="abf9a2c0685cdb77dfc4485c18bd9bf6f"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_shader_location.html">ShaderLocation</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shaderLocations</b></td></tr>
+<tr class="separator:abf9a2c0685cdb77dfc4485c18bd9bf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Made up of several shader resources, these are used in rendering graphics within the engine. </p>
@@ -190,6 +213,25 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>programID</b></td><
       </table>
 </div><div class="memdoc">
 <p>Binds a shader resource to the shader program. </p>
+
+</div>
+</div>
+<a id="acaa18e4292df74318a072ebca97d74ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa18e4292df74318a072ebca97d74ae">&#9670;&nbsp;</a></span>GetLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLint NobleEngine::ShaderProgram::GetLocation </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets a location from the list, or if it does not contain it creates and adds it to list. </p>
 
 </div>
 </div>
