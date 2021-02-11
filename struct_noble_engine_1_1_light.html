@@ -108,8 +108,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adc87b63a9a643bfd2814bbd2b7ee1e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b4f2f976244bbaea5250ffe15b09af"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#a81b4f2f976244bbaea5250ffe15b09af">lightTransform</a></td></tr>
 <tr class="separator:a81b4f2f976244bbaea5250ffe15b09af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49614d32b82c0890778adf025a7023f"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#aa49614d32b82c0890778adf025a7023f">ambientColour</a></td></tr>
-<tr class="separator:aa49614d32b82c0890778adf025a7023f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561a1e5006a9be1936af019ee024b75c"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#a561a1e5006a9be1936af019ee024b75c">diffuseColour</a></td></tr>
 <tr class="separator:a561a1e5006a9be1936af019ee024b75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf03bbfc62af2fd5620db60eecad9c8c"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#adf03bbfc62af2fd5620db60eecad9c8c">specularColour</a></td></tr>
@@ -120,6 +118,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a7816734f4cc0773d3d5773deb866d46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b3dcd08e52c5dadff00bd20b0b23b44"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#a2b3dcd08e52c5dadff00bd20b0b23b44">quadratic</a></td></tr>
 <tr class="separator:a2b3dcd08e52c5dadff00bd20b0b23b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa05903f45de073c8617b92ba0c9192"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_light.html#a1fa05903f45de073c8617b92ba0c9192">intensity</a></td></tr>
+<tr class="separator:a1fa05903f45de073c8617b92ba0c9192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_noble_engine_1_1_component_base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_noble_engine_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_noble_engine_1_1_component_base.html">NobleEngine::ComponentBase</a></td></tr>
 <tr class="memitem:ad8dc1af8c1a4a646450ab465a2d50e92 inherit pub_attribs_struct_noble_engine_1_1_component_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_component_base.html#ad8dc1af8c1a4a646450ab465a2d50e92">entityID</a></td></tr>
 <tr class="separator:ad8dc1af8c1a4a646450ab465a2d50e92 inherit pub_attribs_struct_noble_engine_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,21 +162,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa49614d32b82c0890778adf025a7023f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa49614d32b82c0890778adf025a7023f">&#9670;&nbsp;</a></span>ambientColour</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">glm::vec3 NobleEngine::Light::ambientColour</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Stores the lights ambient colour. </p>
-
-</div>
-</div>
 <a id="afba20f1e6a069af034787400b3075304"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afba20f1e6a069af034787400b3075304">&#9670;&nbsp;</a></span>constant</h2>
 
@@ -204,6 +189,21 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Stores the lights diffuse colour. </p>
+
+</div>
+</div>
+<a id="a1fa05903f45de073c8617b92ba0c9192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa05903f45de073c8617b92ba0c9192">&#9670;&nbsp;</a></span>intensity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float NobleEngine::Light::intensity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the lights intensity value. </p>
 
 </div>
 </div>

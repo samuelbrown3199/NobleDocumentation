@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['resourcepath_269',['resourcePath',['../struct_noble_engine_1_1_resource.html#abea4557e439532caf6ea37068df0589a',1,'NobleEngine::Resource']]],
-  ['resources_270',['resources',['../struct_noble_engine_1_1_resource_manager.html#adcc3e7452f434ae3da5d3af7e3fb7c7b',1,'NobleEngine::ResourceManager']]],
-  ['rigidbody_271',['rigidBody',['../struct_noble_engine_1_1_physics_body.html#a6ecb83ff7f81578115e5fe53b7865f35',1,'NobleEngine::PhysicsBody']]],
-  ['rotation_272',['rotation',['../struct_noble_engine_1_1_transform.html#a598e1a9bce134c1dc1d6ebf99a4aec2d',1,'NobleEngine::Transform']]]
+  ['quadratic_332',['quadratic',['../struct_noble_engine_1_1_light.html#a2b3dcd08e52c5dadff00bd20b0b23b44',1,'NobleEngine::Light']]],
+  ['quadvao_333',['quadVAO',['../struct_noble_engine_1_1_primitive_shapes.html#a5d370ee62a16735e56ac139e69152c60',1,'NobleEngine::PrimitiveShapes']]]
 ];

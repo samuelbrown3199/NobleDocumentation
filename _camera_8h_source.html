@@ -76,23 +76,26 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define CAMERA_H_</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../EngineCore/Component.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;glm/glm.hpp&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_camera.html">Camera</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_component.html">Component</a>&lt;Camera&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">   19</a></span>&#160;        glm::mat4 <a class="code" href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">viewMatrix</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        glm::vec3 forward = glm::vec3(0.0f, 0.0f, -1.0f);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Components/Transform.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;glm/glm.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_camera.html">Camera</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_component.html">Component</a>&lt;Camera&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera.html#a4edfe877c9b3f91e23dcd0a284b61ff9">   20</a></span>&#160;        std::shared_ptr&lt;Transform&gt; <a class="code" href="struct_noble_engine_1_1_camera.html#a4edfe877c9b3f91e23dcd0a284b61ff9">camTransform</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">   24</a></span>&#160;        glm::mat4 <a class="code" href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">viewMatrix</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        glm::vec3 forward = glm::vec3(0.0f, 0.0f, -1.0f);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_noble_engine_1_1_camera_html_a4edfe877c9b3f91e23dcd0a284b61ff9"><div class="ttname"><a href="struct_noble_engine_1_1_camera.html#a4edfe877c9b3f91e23dcd0a284b61ff9">NobleEngine::Camera::camTransform</a></div><div class="ttdeci">std::shared_ptr&lt; Transform &gt; camTransform</div><div class="ttdef"><b>Definition:</b> Camera.h:20</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_component_html"><div class="ttname"><a href="struct_noble_engine_1_1_component.html">NobleEngine::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:42</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_camera_html_a24a3c850190da4dfdf3ac27ee8f5d3e1"><div class="ttname"><a href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">NobleEngine::Camera::viewMatrix</a></div><div class="ttdeci">glm::mat4 viewMatrix</div><div class="ttdef"><b>Definition:</b> Camera.h:19</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_camera_html"><div class="ttname"><a href="struct_noble_engine_1_1_camera.html">NobleEngine::Camera</a></div><div class="ttdef"><b>Definition:</b> Camera.h:15</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_camera_html_a24a3c850190da4dfdf3ac27ee8f5d3e1"><div class="ttname"><a href="struct_noble_engine_1_1_camera.html#a24a3c850190da4dfdf3ac27ee8f5d3e1">NobleEngine::Camera::viewMatrix</a></div><div class="ttdeci">glm::mat4 viewMatrix</div><div class="ttdef"><b>Definition:</b> Camera.h:24</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_camera_html"><div class="ttname"><a href="struct_noble_engine_1_1_camera.html">NobleEngine::Camera</a></div><div class="ttdef"><b>Definition:</b> Camera.h:16</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

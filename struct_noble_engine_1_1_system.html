@@ -88,6 +88,10 @@ Inheritance diagram for NobleEngine::System&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa31b32d4d63d57031eddee6988039438"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_system.html#aa31b32d4d63d57031eddee6988039438">PreUpdate</a> ()</td></tr>
+<tr class="separator:aa31b32d4d63d57031eddee6988039438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9508cb2ecbc418c9c302b9efa6c615a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_system.html#ad9508cb2ecbc418c9c302b9efa6c615a">PreRender</a> ()</td></tr>
+<tr class="separator:ad9508cb2ecbc418c9c302b9efa6c615a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a7aa2aafe72a96a1dcf6b0dba8a266"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_system.html#a28a7aa2aafe72a96a1dcf6b0dba8a266">OnUpdate</a> (std::shared_ptr&lt; T &gt; comp)</td></tr>
 <tr class="separator:a28a7aa2aafe72a96a1dcf6b0dba8a266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08449a2b175345685d2fb14c84f42a26"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_system.html#a08449a2b175345685d2fb14c84f42a26">OnRender</a> (std::shared_ptr&lt; T &gt; comp)</td></tr>
@@ -188,7 +192,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Inherited classes can implement this function with a parameter taking in a shared pointer of the type. Functionality can then be called on that pointer. </p>
 
-<p>Reimplemented in <a class="el" href="struct_noble_engine_1_1_mesh_renderer_system.html#a2dcb116136a8b81e371ef1f4573f4add">NobleEngine::MeshRendererSystem</a>, and <a class="el" href="struct_noble_engine_1_1_light_system.html#a943980a5581e00a23c4cb28b651a9f33">NobleEngine::LightSystem</a>.</p>
+<p>Reimplemented in <a class="el" href="struct_noble_engine_1_1_sprite_renderer_system.html#a7c8327fbd642cba78836d120e55c91bf">NobleEngine::SpriteRendererSystem</a>, <a class="el" href="struct_noble_engine_1_1_mesh_renderer_system.html#a2dcb116136a8b81e371ef1f4573f4add">NobleEngine::MeshRendererSystem</a>, and <a class="el" href="struct_noble_engine_1_1_light_system.html#a943980a5581e00a23c4cb28b651a9f33">NobleEngine::LightSystem</a>.</p>
 
 </div>
 </div>
@@ -220,6 +224,64 @@ template&lt;typename T &gt; </div>
 <p>Inherited classes can implement this function with a parameter taking in a shared pointer of the type. Functionality can then be called on that pointer. </p>
 
 <p>Reimplemented in <a class="el" href="struct_noble_engine_1_1_transform_system.html#a5e33d5d39fa4ef85fd1e5264b877c4fb">NobleEngine::TransformSystem</a>, <a class="el" href="struct_noble_engine_1_1_physics_body_system.html#acd245bddd4d7e3deae613389d41c8de6">NobleEngine::PhysicsBodySystem</a>, <a class="el" href="struct_noble_engine_1_1_camera_system.html#a30dbe449a44b1c4694536b15c0cc0493">NobleEngine::CameraSystem</a>, <a class="el" href="struct_noble_engine_1_1_audio_source_system.html#a8d80784e239df711b52ea6d1eea7dd7a">NobleEngine::AudioSourceSystem</a>, and <a class="el" href="struct_noble_engine_1_1_audio_listener_system.html#a8455c6c07a07743fe98bc660a35db617">NobleEngine::AudioListenerSystem</a>.</p>
+
+</div>
+</div>
+<a id="ad9508cb2ecbc418c9c302b9efa6c615a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9508cb2ecbc418c9c302b9efa6c615a">&#9670;&nbsp;</a></span>PreRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="struct_noble_engine_1_1_system.html">NobleEngine::System</a>&lt; T &gt;::PreRender </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function is called before render loops over every component. </p>
+
+<p>Reimplemented in <a class="el" href="struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7">NobleEngine::LightSystem</a>.</p>
+
+</div>
+</div>
+<a id="aa31b32d4d63d57031eddee6988039438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31b32d4d63d57031eddee6988039438">&#9670;&nbsp;</a></span>PreUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="struct_noble_engine_1_1_system.html">NobleEngine::System</a>&lt; T &gt;::PreUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function is called before update loops over every component. </p>
 
 </div>
 </div>

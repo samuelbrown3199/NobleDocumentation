@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['removeallcomponents_227',['RemoveAllComponents',['../struct_noble_engine_1_1_entity.html#ad1dce1ce8fe3364b51528a9e9a6081dc',1,'NobleEngine::Entity']]],
-  ['removecomponent_228',['RemoveComponent',['../struct_noble_engine_1_1_entity.html#a0080fc9ebb5f92c0a19a4a6c5da4ad01',1,'NobleEngine::Entity']]],
-  ['removerigidbody_229',['RemoveRigidbody',['../struct_noble_engine_1_1_physics_world.html#ad0b6ea6000c1e952eb8a52e1a893df08',1,'NobleEngine::PhysicsWorld']]],
-  ['render_230',['Render',['../struct_noble_engine_1_1_system_base.html#a8e0d4767f4d39bd43be757c4c3b0d124',1,'NobleEngine::SystemBase']]]
+  ['prerender_284',['PreRender',['../struct_noble_engine_1_1_system.html#ad9508cb2ecbc418c9c302b9efa6c615a',1,'NobleEngine::System::PreRender()'],['../struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7',1,'NobleEngine::LightSystem::PreRender()']]],
+  ['preupdate_285',['PreUpdate',['../struct_noble_engine_1_1_system.html#aa31b32d4d63d57031eddee6988039438',1,'NobleEngine::System']]],
+  ['printoutperformancestats_286',['PrintOutPerformanceStats',['../struct_noble_engine_1_1_performance_stats.html#a50d72dd49d3c048e872d8127d10f5f7d',1,'NobleEngine::PerformanceStats']]]
 ];
