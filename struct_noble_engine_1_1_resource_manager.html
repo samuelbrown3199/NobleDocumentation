@@ -85,6 +85,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0bdd759293886773e71350307f67f16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32dac05b229d3662f9cc3ad543ad90e3"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_resource_manager.html#a32dac05b229d3662f9cc3ad543ad90e3">LoadMaterial</a> (std::string diffusePath, std::string specularPath)</td></tr>
 <tr class="separator:a32dac05b229d3662f9cc3ad543ad90e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7ad120dd160a6551de75677313b669"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_font.html">Font</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_resource_manager.html#a8c7ad120dd160a6551de75677313b669">LoadFont</a> (std::string fontPath, int fontPixelSize)</td></tr>
+<tr class="separator:a8c7ad120dd160a6551de75677313b669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1ee919ab164ec5c73b4e0c597c1009"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_resource_manager.html#ade1ee919ab164ec5c73b4e0c597c1009">UnloadUnusedResources</a> ()</td></tr>
 <tr class="separator:ade1ee919ab164ec5c73b4e0c597c1009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -102,6 +104,43 @@ static std::vector&lt; std::shared_ptr&lt; <a class="el" href="struct_noble_engi
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles resource management. Stores, loads and unloads resources. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8c7ad120dd160a6551de75677313b669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7ad120dd160a6551de75677313b669">&#9670;&nbsp;</a></span>LoadFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_font.html">Font</a> &gt; NobleEngine::ResourceManager::LoadFont </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fontPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fontPixelSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads a font file with the set pixel size. This can be used to load a font multiple times with different font sizes. </p>
+
+</div>
+</div>
 <a id="a32dac05b229d3662f9cc3ad543ad90e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32dac05b229d3662f9cc3ad543ad90e3">&#9670;&nbsp;</a></span>LoadMaterial()</h2>
 

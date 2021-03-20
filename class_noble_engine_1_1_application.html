@@ -88,10 +88,12 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4e5fc8d9269e3bb888309cb25d18230"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_noble_engine_1_1_application.html">Application</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#ac4e5fc8d9269e3bb888309cb25d18230">InitializeEngine</a> (std::string windowName, int windowWidth, int windowHeight)</td></tr>
 <tr class="separator:ac4e5fc8d9269e3bb888309cb25d18230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcad573a81aec8893003ed972cf81a2"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#aabcad573a81aec8893003ed972cf81a2">CreateScene</a> ()</td></tr>
+<tr class="separator:aabcad573a81aec8893003ed972cf81a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbfd2832bd146f3c45e114078633937"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a3fbfd2832bd146f3c45e114078633937">ChangeScene</a> (int index)</td></tr>
+<tr class="separator:a3fbfd2832bd146f3c45e114078633937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf283583fdb8d4952147089386bb9bd"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#abcf283583fdb8d4952147089386bb9bd">CreateEntity</a> ()</td></tr>
 <tr class="separator:abcf283583fdb8d4952147089386bb9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa8b6ae60ba4eb7f4667ffe7b559efa"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#afaa8b6ae60ba4eb7f4667ffe7b559efa">CreateEntity</a> (std::string tag)</td></tr>
-<tr class="separator:afaa8b6ae60ba4eb7f4667ffe7b559efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0fa17da95d0ad81344ce11d8fa7fc9a"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#ac0fa17da95d0ad81344ce11d8fa7fc9a">GetEntity</a> (int ID)</td></tr>
 <tr class="separator:ac0fa17da95d0ad81344ce11d8fa7fc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519fe496c59ac79b42c462b9c222baa6"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_resource_manager.html">ResourceManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a519fe496c59ac79b42c462b9c222baa6">GetResourceManager</a> ()</td></tr>
@@ -107,11 +109,19 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa43a330e683da4dd5446371e9d5eeae2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa43a330e683da4dd5446371e9d5eeae2"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#aa43a330e683da4dd5446371e9d5eeae2">GetSystem</a> ()</td></tr>
 <tr class="separator:aa43a330e683da4dd5446371e9d5eeae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad063f129f9e054bcd626f47d061c5f41"><td class="memTemplParams" colspan="2"><a id="ad063f129f9e054bcd626f47d061c5f41"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad063f129f9e054bcd626f47d061c5f41"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>BindUISystem</b> ()</td></tr>
+<tr class="separator:ad063f129f9e054bcd626f47d061c5f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2696a6328f9a65760fc2860e38372b54"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a2696a6328f9a65760fc2860e38372b54">loop</a> = true</td></tr>
+<tr class="separator:a2696a6328f9a65760fc2860e38372b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e113cb05decfc3edfe071298649055"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_noble_engine_1_1_performance_stats.html">PerformanceStats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a85e113cb05decfc3edfe071298649055">performanceStats</a></td></tr>
 <tr class="separator:a85e113cb05decfc3edfe071298649055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc9b1d894dd48af180b089bf0a1f7d7"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#afcc9b1d894dd48af180b089bf0a1f7d7">activeScene</a></td></tr>
+<tr class="separator:afcc9b1d894dd48af180b089bf0a1f7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c43a3f6eec568140338cdfa2a440f8"><td class="memItemLeft" align="right" valign="top">static std::weak_ptr&lt; <a class="el" href="class_noble_engine_1_1_application.html">Application</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_engine_1_1_application.html#a90c43a3f6eec568140338cdfa2a440f8">self</a></td></tr>
 <tr class="separator:a90c43a3f6eec568140338cdfa2a440f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a607e211b9815bf8f5ed113b5d1adc790"><td class="memItemLeft" align="right" valign="top"><a id="a607e211b9815bf8f5ed113b5d1adc790"></a>
@@ -219,8 +229,35 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a3fbfd2832bd146f3c45e114078633937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbfd2832bd146f3c45e114078633937">&#9670;&nbsp;</a></span>ChangeScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NobleEngine::Application::ChangeScene </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Changes the scene to the scene at index. </p>
+
+</div>
+</div>
 <a id="abcf283583fdb8d4952147089386bb9bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcf283583fdb8d4952147089386bb9bd">&#9670;&nbsp;</a></span>CreateEntity() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf283583fdb8d4952147089386bb9bd">&#9670;&nbsp;</a></span>CreateEntity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,8 +282,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="afaa8b6ae60ba4eb7f4667ffe7b559efa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaa8b6ae60ba4eb7f4667ffe7b559efa">&#9670;&nbsp;</a></span>CreateEntity() <span class="overload">[2/2]</span></h2>
+<a id="aabcad573a81aec8893003ed972cf81a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcad573a81aec8893003ed972cf81a2">&#9670;&nbsp;</a></span>CreateScene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,10 +292,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_entity.html">Entity</a> &gt; NobleEngine::Application::CreateEntity </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_scene.html">Scene</a> &gt; NobleEngine::Application::CreateScene </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -268,7 +304,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates an entity with the passed in tag. </p>
+<p>Creates a scene and adds it to the application scene list. </p>
 
 </div>
 </div>
@@ -441,6 +477,29 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afcc9b1d894dd48af180b089bf0a1f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc9b1d894dd48af180b089bf0a1f7d7">&#9670;&nbsp;</a></span>activeScene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_scene.html">Scene</a> &gt; NobleEngine::Application::activeScene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stores the currently active scene. </p>
+
+</div>
+</div>
 <a id="a7edb2655cbcb9b4adc9f333f5f78d277"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7edb2655cbcb9b4adc9f333f5f78d277">&#9670;&nbsp;</a></span>deletionEntities</h2>
 
@@ -484,6 +543,29 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Stores an initialized free type library. </p>
+
+</div>
+</div>
+<a id="a2696a6328f9a65760fc2860e38372b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2696a6328f9a65760fc2860e38372b54">&#9670;&nbsp;</a></span>loop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NobleEngine::Application::loop = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determines whether the main engine loop should run. </p>
 
 </div>
 </div>

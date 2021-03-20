@@ -89,11 +89,15 @@ Inheritance diagram for NobleEngine::UILabel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac87c3d9667f04f7efe238f224232fe39"><td class="memItemLeft" align="right" valign="top"><a id="ac87c3d9667f04f7efe238f224232fe39"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UILabel</b> (glm::vec2 screenPos, glm::vec2 scale)</td></tr>
-<tr class="separator:ac87c3d9667f04f7efe238f224232fe39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7bfc4ad1d51e1294a19f15e2d4ec7e"><td class="memItemLeft" align="right" valign="top"><a id="a5d7bfc4ad1d51e1294a19f15e2d4ec7e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UILabel</b> (unsigned int layer, glm::vec2 screenPos, float labelScale, std::string labelText, glm::vec3 textColour, std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_font.html">Font</a> &gt; font)</td></tr>
+<tr class="separator:a5d7bfc4ad1d51e1294a19f15e2d4ec7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a175d10a4dc5b8018e9995d48859d9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_u_i_label.html#a5a175d10a4dc5b8018e9995d48859d9c">OnRender</a> ()</td></tr>
 <tr class="separator:a5a175d10a4dc5b8018e9995d48859d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_struct_noble_engine_1_1_u_i_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct_noble_engine_1_1_u_i_element')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="struct_noble_engine_1_1_u_i_element.html">NobleEngine::UIElement</a></td></tr>
+<tr class="memitem:a1383f5d9515d89792350e33e08492dd3 inherit pub_methods_struct_noble_engine_1_1_u_i_element"><td class="memItemLeft" align="right" valign="top"><a id="a1383f5d9515d89792350e33e08492dd3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> ()</td></tr>
+<tr class="separator:a1383f5d9515d89792350e33e08492dd3 inherit pub_methods_struct_noble_engine_1_1_u_i_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -103,9 +107,9 @@ std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_font.html">Font<
 <tr class="memitem:a0f23c6ec2947ded166e6e64867bd920d"><td class="memItemLeft" align="right" valign="top"><a id="a0f23c6ec2947ded166e6e64867bd920d"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td></tr>
 <tr class="separator:a0f23c6ec2947ded166e6e64867bd920d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d0376acd99a00ac9f8c04d2a016dae7"><td class="memItemLeft" align="right" valign="top"><a id="a1d0376acd99a00ac9f8c04d2a016dae7"></a>
-glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> = glm::vec3(1.0f, 0.0f, 0.0f)</td></tr>
-<tr class="separator:a1d0376acd99a00ac9f8c04d2a016dae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e77bec7ecfce9df7c4abdc3a5052886"><td class="memItemLeft" align="right" valign="top"><a id="a0e77bec7ecfce9df7c4abdc3a5052886"></a>
+glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b> = glm::vec3(1.0f, 0.0f, 0.0f)</td></tr>
+<tr class="separator:a0e77bec7ecfce9df7c4abdc3a5052886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d49bb50239780962855a849d2143c52"><td class="memItemLeft" align="right" valign="top"><a id="a6d49bb50239780962855a849d2143c52"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> = 1.0f</td></tr>
 <tr class="separator:a6d49bb50239780962855a849d2143c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,7 +119,7 @@ std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_u_i_rect.html">U
 <tr class="separator:a8cd7eb2ceb7c018dc7062db438b2658b inherit pub_attribs_struct_noble_engine_1_1_u_i_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Renders text onto the screen. </p>
+<div class="textblock"><p>Renders text onto the screen as a UI element. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5a175d10a4dc5b8018e9995d48859d9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a175d10a4dc5b8018e9995d48859d9c">&#9670;&nbsp;</a></span>OnRender()</h2>

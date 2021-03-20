@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['uibox_295',['UIBox',['../struct_noble_engine_1_1_u_i_box.html#a90a2210347c407b7eb1e6f60c222c5e1',1,'NobleEngine::UIBox::UIBox(glm::vec2 screenPos, glm::vec2 scale)'],['../struct_noble_engine_1_1_u_i_box.html#a5fb2d40896e3ac8566d94c86b1718161',1,'NobleEngine::UIBox::UIBox(glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc)'],['../struct_noble_engine_1_1_u_i_box.html#a4ab915a8d8455dcd5d12fe248eb41b6c',1,'NobleEngine::UIBox::UIBox(glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc, std::string hoverTextureLoc)']]],
-  ['unloadunusedresources_296',['UnloadUnusedResources',['../struct_noble_engine_1_1_resource_manager.html#ade1ee919ab164ec5c73b4e0c597c1009',1,'NobleEngine::ResourceManager']]],
-  ['update_297',['Update',['../struct_noble_engine_1_1_system_base.html#a04ebf962f2fab6a5516cf12a91c51838',1,'NobleEngine::SystemBase']]],
-  ['updatescreensize_298',['UpdateScreenSize',['../struct_noble_engine_1_1_screen.html#aa2f58952fac097edd73e83ca5ae4a6f4',1,'NobleEngine::Screen']]],
-  ['useprogram_299',['UseProgram',['../struct_noble_engine_1_1_shader_program.html#a936be24bd87090177eeb876e7012a6dc',1,'NobleEngine::ShaderProgram']]]
+  ['prerender_350',['PreRender',['../struct_noble_engine_1_1_system.html#ad9508cb2ecbc418c9c302b9efa6c615a',1,'NobleEngine::System::PreRender()'],['../struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7',1,'NobleEngine::LightSystem::PreRender()']]],
+  ['preupdate_351',['PreUpdate',['../struct_noble_engine_1_1_system.html#aa31b32d4d63d57031eddee6988039438',1,'NobleEngine::System']]],
+  ['printoutperformancestats_352',['PrintOutPerformanceStats',['../struct_noble_engine_1_1_performance_stats.html#a50d72dd49d3c048e872d8127d10f5f7d',1,'NobleEngine::PerformanceStats']]]
 ];

@@ -75,6 +75,8 @@ $(function() {
 <div class="title">NobleEngine::Font Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_font_8h_source.html">Font.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NobleEngine::Font:</div>
 <div class="dyncontent">
@@ -87,21 +89,43 @@ Inheritance diagram for NobleEngine::Font:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af1983847966566344f7007ab3a7be384"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_font.html#af1983847966566344f7007ab3a7be384">Font</a> (int pixelSize)</td></tr>
+<tr class="separator:af1983847966566344f7007ab3a7be384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5811dca8ca2777d82a470331789bd574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_font.html#a5811dca8ca2777d82a470331789bd574">OnLoad</a> ()</td></tr>
 <tr class="separator:a5811dca8ca2777d82a470331789bd574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a125f3055c4eae4122521b6df3585f84f"><td class="memItemLeft" align="right" valign="top"><a id="a125f3055c4eae4122521b6df3585f84f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fontPixelSize</b> = 48</td></tr>
+<tr class="memitem:a125f3055c4eae4122521b6df3585f84f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_font.html#a125f3055c4eae4122521b6df3585f84f">fontPixelSize</a> = 48</td></tr>
 <tr class="separator:a125f3055c4eae4122521b6df3585f84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ceea3e03ef5614e540b9dd62b14158"><td class="memItemLeft" align="right" valign="top"><a id="a98ceea3e03ef5614e540b9dd62b14158"></a>
-std::map&lt; char, <a class="el" href="struct_noble_engine_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>characters</b></td></tr>
+<tr class="memitem:a98ceea3e03ef5614e540b9dd62b14158"><td class="memItemLeft" align="right" valign="top">std::map&lt; char, <a class="el" href="struct_noble_engine_1_1_character.html">Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_font.html#a98ceea3e03ef5614e540b9dd62b14158">characters</a></td></tr>
 <tr class="separator:a98ceea3e03ef5614e540b9dd62b14158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_noble_engine_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_noble_engine_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_noble_engine_1_1_resource.html">NobleEngine::Resource</a></td></tr>
 <tr class="memitem:abea4557e439532caf6ea37068df0589a inherit pub_attribs_struct_noble_engine_1_1_resource"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_resource.html#abea4557e439532caf6ea37068df0589a">resourcePath</a></td></tr>
 <tr class="separator:abea4557e439532caf6ea37068df0589a inherit pub_attribs_struct_noble_engine_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Stores information for a font file. Loaded as a resource. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af1983847966566344f7007ab3a7be384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1983847966566344f7007ab3a7be384">&#9670;&nbsp;</a></span>Font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NobleEngine::Font::Font </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a font with a pixel size parameter. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5811dca8ca2777d82a470331789bd574"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5811dca8ca2777d82a470331789bd574">&#9670;&nbsp;</a></span>OnLoad()</h2>
@@ -125,9 +149,40 @@ std::map&lt; char, <a class="el" href="struct_noble_engine_1_1_character.html">C
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Loads the resource. </p>
+<p>Loads the font file. </p>
 
 <p>Reimplemented from <a class="el" href="struct_noble_engine_1_1_resource.html#a4548d73e1934242522f386475b81b0aa">NobleEngine::Resource</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a98ceea3e03ef5614e540b9dd62b14158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ceea3e03ef5614e540b9dd62b14158">&#9670;&nbsp;</a></span>characters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;char, <a class="el" href="struct_noble_engine_1_1_character.html">Character</a>&gt; NobleEngine::Font::characters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stores the character information for the font. </p>
+
+</div>
+</div>
+<a id="a125f3055c4eae4122521b6df3585f84f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125f3055c4eae4122521b6df3585f84f">&#9670;&nbsp;</a></span>fontPixelSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NobleEngine::Font::fontPixelSize = 48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines how big the font should be. </p>
 
 </div>
 </div>

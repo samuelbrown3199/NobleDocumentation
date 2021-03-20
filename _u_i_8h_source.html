@@ -92,88 +92,197 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        glm::vec2 screenPosition;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        glm::vec2 rectScale;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a>()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            screenPosition = glm::vec2(0, 0);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            rectScale = glm::vec2(0, 0);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a>(glm::vec2 _screenPos, glm::vec2 _rectScale)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            screenPosition = _screenPos;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            rectScale = _rectScale;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        glm::mat4 GetUIMatrix()</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            glm::mat4 uiMat(1.0f);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            uiMat = glm::translate(uiMat, glm::vec3(screenPosition, 0.0f));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            uiMat = glm::scale(uiMat, glm::vec3(rectScale, 1.0f));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> uiMat;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> IsMouseInRect()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> xMousePos = <a class="code" href="class_noble_engine_1_1_input_manager.html#a25820416b748a0ab7886ce41d12c0fb4">InputManager::mouseX</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> yMousePos = InputManager::mouseY;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (xMousePos &gt;= screenPosition.x &amp;&amp; xMousePos &lt;= screenPosition.x + rectScale.x)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordflow">if</span> (yMousePos &gt;= screenPosition.y &amp;&amp; yMousePos &lt;= screenPosition.y + rectScale.y)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    };</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_element.html">   66</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::shared_ptr&lt;UIRect&gt; elementRect;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnRender() {};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_box.html">   76</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_box.html">UIBox</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::shared_ptr&lt;Texture&gt; baseTexture, hoverTexture;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#a90a2210347c407b7eb1e6f60c222c5e1">UIBox</a>(glm::vec2 screenPos, glm::vec2 scale);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#a90a2210347c407b7eb1e6f60c222c5e1">UIBox</a>(glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#a90a2210347c407b7eb1e6f60c222c5e1">UIBox</a>(glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc, std::string hoverTextureLoc);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_box.html#a55084f8a57e4207e5461897a06b6009d">OnRender</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    };</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_label.html">  100</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_label.html">UILabel</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::shared_ptr&lt;Font&gt; labelFont;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        std::string text;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        glm::vec3 color = glm::vec3(1.0f, 0.0f, 0.0f);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">float</span> scale = 1.0f;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_label.html">UILabel</a>(glm::vec2 screenPos, glm::vec2 scale);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_label.html#a5a175d10a4dc5b8018e9995d48859d9c">OnRender</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html">   25</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html#a0e25f297b03dceb2336f926ddf6af840">   30</a></span>&#160;        std::shared_ptr&lt;UIRect&gt; <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#a0e25f297b03dceb2336f926ddf6af840">parentRect</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html#a44a0cc53f27df9bfcfe6166869aa1c17">   34</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#a44a0cc53f27df9bfcfe6166869aa1c17">layer</a> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html#a92f6b28024c759fc5401f8fca056fb10">   38</a></span>&#160;        glm::vec2 <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#a92f6b28024c759fc5401f8fca056fb10">screenPosition</a> = glm::vec2(0,0);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_rect.html#a969f4cf46a17bf8905c64b51369d58f9">   42</a></span>&#160;        glm::vec2 <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#a969f4cf46a17bf8905c64b51369d58f9">rectScale</a> = glm::vec2(0, 0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _layer, glm::vec2 _screenPos, glm::vec2 _rectScale);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        glm::mat4 <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#a04678d75ab75c08f445cb80129be8080">GetUIMatrix</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_noble_engine_1_1_u_i_rect.html#abc9c14aebc2189bc6149d06eefee12e8">IsMouseInRect</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_element.html">   59</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::shared_ptr&lt;UIRect&gt; elementRect;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpdate() {};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnRender() {};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_box.html">   71</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_box.html">UIBox</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::shared_ptr&lt;Texture&gt; baseTexture, hoverTexture;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#aa0f743dee443fc2e15e4d882946a8ddf">UIBox</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#aa0f743dee443fc2e15e4d882946a8ddf">UIBox</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_box.html#aa0f743dee443fc2e15e4d882946a8ddf">UIBox</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc, std::string hoverTextureLoc);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_box.html#a55084f8a57e4207e5461897a06b6009d">OnRender</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_button.html">   95</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_button.html">UIButton</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">bool</span> pressed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::shared_ptr&lt;Texture&gt; baseTexture, hoverTexture, clickedTexture;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_button.html#a2e1ed21f8591e38b405b8655dd38da53">UIButton</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_button.html#a2e1ed21f8591e38b405b8655dd38da53">UIButton</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale, std::string baseTextureLoc, std::string hoverTextureLoc, std::string clickedTextureLoc);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_button.html#ac0cc2daae7b210821cdf97e7baad5a90">OnUpdate</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_button.html#a26df0e9d840c3c3bfd17872da7c3b2cf">OnRender</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_noble_engine_1_1_u_i_button.html#afd23e0d82ceca38b318b0219f9e8a43f">ClickedOn</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    };</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_label.html">  128</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_label.html">UILabel</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        std::shared_ptr&lt;Font&gt; labelFont;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        std::string text;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        glm::vec3 colour = glm::vec3(1.0f, 0.0f, 0.0f);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">float</span> scale = 1.0f;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_label.html">UILabel</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, <span class="keywordtype">float</span> labelScale, std::string labelText, glm::vec3 textColour, std::shared_ptr&lt;Font&gt; font);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_label.html#a5a175d10a4dc5b8018e9995d48859d9c">OnRender</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    };</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_toggle.html">  144</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_toggle.html">UIToggle</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">bool</span> toggle = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        std::shared_ptr&lt;Texture&gt; baseTexture, toggledTexture;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_toggle.html">UIToggle</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, <span class="keywordtype">bool</span> startingValue, std::string baseTextureLoc, std::string toggleTextureLoc, glm::vec2 screenPos, glm::vec2 rectScale);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">void</span> OnUpdate();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">void</span> OnRender();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    };</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_window.html">  157</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_window.html">UIWindow</a> : <a class="code" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">int</span> maxLayers = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        std::shared_ptr&lt;Texture&gt; windowTexture;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span> currentlyDragged = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_window.html#a0a830fdda592c2043f313b20d56cdafe">  171</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a0a830fdda592c2043f313b20d56cdafe">draggable</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_window.html#a07e3b8e5d773551da588c8e34f0043df">  175</a></span>&#160;        std::vector&lt;std::shared_ptr&lt;UIElement&gt;&gt; <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a07e3b8e5d773551da588c8e34f0043df">uiElements</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="struct_noble_engine_1_1_u_i_window.html#ad7809027aad39be2a85a33436f09bcd5">UIWindow</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> layer, glm::vec2 screenPos, glm::vec2 scale, <span class="keywordtype">bool</span> canDrag, std::string textureLoc);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_window.html#af7912d1b751028373f7ea0014f60434e">  186</a></span>&#160;        std::shared_ptr&lt;T&gt; <a class="code" href="struct_noble_engine_1_1_u_i_window.html#af7912d1b751028373f7ea0014f60434e">AddUIElement</a>()</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            std::shared_ptr&lt;T&gt; element = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            element-&gt;elementRect-&gt;parentRect = elementRect;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a07e3b8e5d773551da588c8e34f0043df">uiElements</a>.push_back(element);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">return</span> element;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_window.html#a556b9380724175f8d793345d68d4a40d">  198</a></span>&#160;        std::shared_ptr&lt;T&gt; <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a556b9380724175f8d793345d68d4a40d">AddUIElement</a>(Args&amp;&amp;... args)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            std::shared_ptr&lt;T&gt; element = std::make_shared&lt;T&gt;(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            element-&gt;elementRect-&gt;parentRect = elementRect;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a07e3b8e5d773551da588c8e34f0043df">uiElements</a>.push_back(element);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">if</span> (element-&gt;elementRect-&gt;layer &gt; maxLayers)</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                maxLayers = element-&gt;elementRect-&gt;layer;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span> element;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a637c3f741274ced1589006eda45de90d">OnUpdate</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_window.html#a26caa5cd08e2d8a0bb205caf2c1c08c4">OnRender</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    };</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html">  226</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_u_i_system.html">UISystem</a></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordtype">int</span> maxLayers = 0;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#acfd69e4ef8052f3591fe2b31ce5b8d29">  240</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_noble_engine_1_1_u_i_system.html#acfd69e4ef8052f3591fe2b31ce5b8d29">active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#a0332eed81842eabd7d84769f482d20f2">  244</a></span>&#160;        std::vector&lt;std::shared_ptr&lt;UIElement&gt;&gt; <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a0332eed81842eabd7d84769f482d20f2">uiElements</a>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#a1a2b0ff8f520b513d34ca5e2f1b6a194">  250</a></span>&#160;        std::shared_ptr&lt;T&gt; <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a1a2b0ff8f520b513d34ca5e2f1b6a194">AddUIElement</a>()</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            std::shared_ptr&lt;T&gt; element = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a0332eed81842eabd7d84769f482d20f2">uiElements</a>.push_back(element);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">return</span> element;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args&gt;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#ac886752a68ee33f2c68d2a30e56ba497">  262</a></span>&#160;        std::shared_ptr&lt;T&gt; <a class="code" href="struct_noble_engine_1_1_u_i_system.html#ac886752a68ee33f2c68d2a30e56ba497">AddUIElement</a>(Args&amp;&amp;... args)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            std::shared_ptr&lt;T&gt; element = std::make_shared&lt;T&gt;(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a0332eed81842eabd7d84769f482d20f2">uiElements</a>.push_back(element);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">if</span> (element-&gt;elementRect-&gt;layer &gt; maxLayers)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                maxLayers = element-&gt;elementRect-&gt;layer;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">return</span> element;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#a564bd4a4996a9827051969f41ed198c6">  278</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a564bd4a4996a9827051969f41ed198c6">InitializeUI</a>() {};</div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_u_i_system.html#a4eec19461d401d980feb7e6bdc6ccef4">  282</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a4eec19461d401d980feb7e6bdc6ccef4">HandleEvents</a>() {};</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a41d16cb5d74b2ee3988fe85ea8a39de2">Update</a>();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_u_i_system.html#a86a7dd66cc151a5a0fe2247ea787fa83">Render</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    };</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html_a55084f8a57e4207e5461897a06b6009d"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html#a55084f8a57e4207e5461897a06b6009d">NobleEngine::UIBox::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:20</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_label_html_a5a175d10a4dc5b8018e9995d48859d9c"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_label.html#a5a175d10a4dc5b8018e9995d48859d9c">NobleEngine::UILabel::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:51</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html">NobleEngine::UIBox</a></div><div class="ttdef"><b>Definition:</b> UI.h:77</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_element_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_element.html">NobleEngine::UIElement</a></div><div class="ttdef"><b>Definition:</b> UI.h:67</div></div>
-<div class="ttc" id="aclass_noble_engine_1_1_input_manager_html_a25820416b748a0ab7886ce41d12c0fb4"><div class="ttname"><a href="class_noble_engine_1_1_input_manager.html#a25820416b748a0ab7886ce41d12c0fb4">NobleEngine::InputManager::mouseX</a></div><div class="ttdeci">static int mouseX</div><div class="ttdef"><b>Definition:</b> InputManager.h:18</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_label_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_label.html">NobleEngine::UILabel</a></div><div class="ttdef"><b>Definition:</b> UI.h:101</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html_a90a2210347c407b7eb1e6f60c222c5e1"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html#a90a2210347c407b7eb1e6f60c222c5e1">NobleEngine::UIBox::UIBox</a></div><div class="ttdeci">UIBox(glm::vec2 screenPos, glm::vec2 scale)</div><div class="ttdef"><b>Definition:</b> UI.cpp:5</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html">NobleEngine::UIRect</a></div><div class="ttdef"><b>Definition:</b> UI.h:23</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_button_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_button.html">NobleEngine::UIButton</a></div><div class="ttdef"><b>Definition:</b> UI.h:96</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html_a55084f8a57e4207e5461897a06b6009d"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html#a55084f8a57e4207e5461897a06b6009d">NobleEngine::UIBox::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:73</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a564bd4a4996a9827051969f41ed198c6"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a564bd4a4996a9827051969f41ed198c6">NobleEngine::UISystem::InitializeUI</a></div><div class="ttdeci">virtual void InitializeUI()</div><div class="ttdef"><b>Definition:</b> UI.h:278</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_button_html_a26df0e9d840c3c3bfd17872da7c3b2cf"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_button.html#a26df0e9d840c3c3bfd17872da7c3b2cf">NobleEngine::UIButton::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:129</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_button_html_ac0cc2daae7b210821cdf97e7baad5a90"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_button.html#ac0cc2daae7b210821cdf97e7baad5a90">NobleEngine::UIButton::OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> UI.cpp:114</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_a637c3f741274ced1589006eda45de90d"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#a637c3f741274ced1589006eda45de90d">NobleEngine::UIWindow::OnUpdate</a></div><div class="ttdeci">void OnUpdate()</div><div class="ttdef"><b>Definition:</b> UI.cpp:284</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a41d16cb5d74b2ee3988fe85ea8a39de2"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a41d16cb5d74b2ee3988fe85ea8a39de2">NobleEngine::UISystem::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> UI.cpp:360</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_ad7809027aad39be2a85a33436f09bcd5"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#ad7809027aad39be2a85a33436f09bcd5">NobleEngine::UIWindow::UIWindow</a></div><div class="ttdeci">UIWindow(unsigned int layer, glm::vec2 screenPos, glm::vec2 scale, bool canDrag, std::string textureLoc)</div><div class="ttdef"><b>Definition:</b> UI.cpp:275</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_label_html_a5a175d10a4dc5b8018e9995d48859d9c"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_label.html#a5a175d10a4dc5b8018e9995d48859d9c">NobleEngine::UILabel::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:176</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html">NobleEngine::UIBox</a></div><div class="ttdef"><b>Definition:</b> UI.h:72</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_element_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_element.html">NobleEngine::UIElement</a></div><div class="ttdef"><b>Definition:</b> UI.h:60</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_a07e3b8e5d773551da588c8e34f0043df"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#a07e3b8e5d773551da588c8e34f0043df">NobleEngine::UIWindow::uiElements</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; UIElement &gt; &gt; uiElements</div><div class="ttdef"><b>Definition:</b> UI.h:175</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a4eec19461d401d980feb7e6bdc6ccef4"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a4eec19461d401d980feb7e6bdc6ccef4">NobleEngine::UISystem::HandleEvents</a></div><div class="ttdeci">virtual void HandleEvents()</div><div class="ttdef"><b>Definition:</b> UI.h:282</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_a0e25f297b03dceb2336f926ddf6af840"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#a0e25f297b03dceb2336f926ddf6af840">NobleEngine::UIRect::parentRect</a></div><div class="ttdeci">std::shared_ptr&lt; UIRect &gt; parentRect</div><div class="ttdef"><b>Definition:</b> UI.h:30</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_a26caa5cd08e2d8a0bb205caf2c1c08c4"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#a26caa5cd08e2d8a0bb205caf2c1c08c4">NobleEngine::UIWindow::OnRender</a></div><div class="ttdeci">void OnRender()</div><div class="ttdef"><b>Definition:</b> UI.cpp:326</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_a556b9380724175f8d793345d68d4a40d"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#a556b9380724175f8d793345d68d4a40d">NobleEngine::UIWindow::AddUIElement</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; AddUIElement(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> UI.h:198</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_a969f4cf46a17bf8905c64b51369d58f9"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#a969f4cf46a17bf8905c64b51369d58f9">NobleEngine::UIRect::rectScale</a></div><div class="ttdeci">glm::vec2 rectScale</div><div class="ttdef"><b>Definition:</b> UI.h:42</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html">NobleEngine::UISystem</a></div><div class="ttdef"><b>Definition:</b> UI.h:227</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_button_html_a2e1ed21f8591e38b405b8655dd38da53"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_button.html#a2e1ed21f8591e38b405b8655dd38da53">NobleEngine::UIButton::UIButton</a></div><div class="ttdeci">UIButton(unsigned int layer, glm::vec2 screenPos, glm::vec2 scale)</div><div class="ttdef"><b>Definition:</b> UI.cpp:99</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_a92f6b28024c759fc5401f8fca056fb10"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#a92f6b28024c759fc5401f8fca056fb10">NobleEngine::UIRect::screenPosition</a></div><div class="ttdeci">glm::vec2 screenPosition</div><div class="ttdef"><b>Definition:</b> UI.h:38</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_button_html_afd23e0d82ceca38b318b0219f9e8a43f"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_button.html#afd23e0d82ceca38b318b0219f9e8a43f">NobleEngine::UIButton::ClickedOn</a></div><div class="ttdeci">bool ClickedOn()</div><div class="ttdef"><b>Definition:</b> UI.cpp:160</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_toggle_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_toggle.html">NobleEngine::UIToggle</a></div><div class="ttdef"><b>Definition:</b> UI.h:145</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_af7912d1b751028373f7ea0014f60434e"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#af7912d1b751028373f7ea0014f60434e">NobleEngine::UIWindow::AddUIElement</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; AddUIElement()</div><div class="ttdef"><b>Definition:</b> UI.h:186</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html_a0a830fdda592c2043f313b20d56cdafe"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html#a0a830fdda592c2043f313b20d56cdafe">NobleEngine::UIWindow::draggable</a></div><div class="ttdeci">bool draggable</div><div class="ttdef"><b>Definition:</b> UI.h:171</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_a44a0cc53f27df9bfcfe6166869aa1c17"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#a44a0cc53f27df9bfcfe6166869aa1c17">NobleEngine::UIRect::layer</a></div><div class="ttdeci">unsigned int layer</div><div class="ttdef"><b>Definition:</b> UI.h:34</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_label_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_label.html">NobleEngine::UILabel</a></div><div class="ttdef"><b>Definition:</b> UI.h:129</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_acfd69e4ef8052f3591fe2b31ce5b8d29"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#acfd69e4ef8052f3591fe2b31ce5b8d29">NobleEngine::UISystem::active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> UI.h:240</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_a04678d75ab75c08f445cb80129be8080"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#a04678d75ab75c08f445cb80129be8080">NobleEngine::UIRect::GetUIMatrix</a></div><div class="ttdeci">glm::mat4 GetUIMatrix()</div><div class="ttdef"><b>Definition:</b> UI.cpp:18</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a1a2b0ff8f520b513d34ca5e2f1b6a194"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a1a2b0ff8f520b513d34ca5e2f1b6a194">NobleEngine::UISystem::AddUIElement</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; AddUIElement()</div><div class="ttdef"><b>Definition:</b> UI.h:250</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html">NobleEngine::UIRect</a></div><div class="ttdef"><b>Definition:</b> UI.h:26</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_rect_html_abc9c14aebc2189bc6149d06eefee12e8"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_rect.html#abc9c14aebc2189bc6149d06eefee12e8">NobleEngine::UIRect::IsMouseInRect</a></div><div class="ttdeci">bool IsMouseInRect()</div><div class="ttdef"><b>Definition:</b> UI.cpp:34</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a86a7dd66cc151a5a0fe2247ea787fa83"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a86a7dd66cc151a5a0fe2247ea787fa83">NobleEngine::UISystem::Render</a></div><div class="ttdeci">void Render()</div><div class="ttdef"><b>Definition:</b> UI.cpp:367</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_ac886752a68ee33f2c68d2a30e56ba497"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#ac886752a68ee33f2c68d2a30e56ba497">NobleEngine::UISystem::AddUIElement</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; AddUIElement(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> UI.h:262</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_box_html_aa0f743dee443fc2e15e4d882946a8ddf"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_box.html#aa0f743dee443fc2e15e4d882946a8ddf">NobleEngine::UIBox::UIBox</a></div><div class="ttdeci">UIBox(unsigned int layer, glm::vec2 screenPos, glm::vec2 scale)</div><div class="ttdef"><b>Definition:</b> UI.cpp:58</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_system_html_a0332eed81842eabd7d84769f482d20f2"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_system.html#a0332eed81842eabd7d84769f482d20f2">NobleEngine::UISystem::uiElements</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; UIElement &gt; &gt; uiElements</div><div class="ttdef"><b>Definition:</b> UI.h:244</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_u_i_window_html"><div class="ttname"><a href="struct_noble_engine_1_1_u_i_window.html">NobleEngine::UIWindow</a></div><div class="ttdef"><b>Definition:</b> UI.h:158</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
