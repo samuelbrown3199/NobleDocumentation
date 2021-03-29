@@ -86,11 +86,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetupMaxThread
 <tr class="memitem:ae10e98076a63b3757a7f285fdfe35180"><td class="memItemLeft" align="right" valign="top"><a id="ae10e98076a63b3757a7f285fdfe35180"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>CleanupLooseThreads</b> ()</td></tr>
 <tr class="separator:ae10e98076a63b3757a7f285fdfe35180"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8f34685fb7155e8d05589b19284e268"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
-<tr class="memitem:ae8f34685fb7155e8d05589b19284e268"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; std::thread &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_threading_manager.html#ae8f34685fb7155e8d05589b19284e268">CreateThread</a> (Args &amp;&amp;... args)</td></tr>
-<tr class="separator:ae8f34685fb7155e8d05589b19284e268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac638ad71a9db64317ff1ab12fef49db3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_threading_manager.html#ac638ad71a9db64317ff1ab12fef49db3">JoinThread</a> (std::shared_ptr&lt; std::thread &gt; thread)</td></tr>
-<tr class="separator:ac638ad71a9db64317ff1ab12fef49db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901d23b43aa099b00e7097ee88b5d7db"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a901d23b43aa099b00e7097ee88b5d7db"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; std::thread &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_threading_manager.html#a901d23b43aa099b00e7097ee88b5d7db">CreateThread</a> (Args &amp;&amp;... _args)</td></tr>
+<tr class="separator:a901d23b43aa099b00e7097ee88b5d7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b5fe84bdbafb215572dad63fef1015"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_engine_1_1_threading_manager.html#af4b5fe84bdbafb215572dad63fef1015">JoinThread</a> (std::shared_ptr&lt; std::thread &gt; _thread)</td></tr>
+<tr class="separator:af4b5fe84bdbafb215572dad63fef1015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -104,8 +104,8 @@ static std::vector&lt; std::shared_ptr&lt; std::thread &gt; &gt;&#160;</td><td c
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles the threads within the engine. NEED TO LOOK INTO SEMAPHORES </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae8f34685fb7155e8d05589b19284e268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8f34685fb7155e8d05589b19284e268">&#9670;&nbsp;</a></span>CreateThread()</h2>
+<a id="a901d23b43aa099b00e7097ee88b5d7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901d23b43aa099b00e7097ee88b5d7db">&#9670;&nbsp;</a></span>CreateThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,7 +119,7 @@ template&lt;typename ... Args&gt; </div>
           <td class="memname">static std::shared_ptr&lt;std::thread&gt; NobleEngine::ThreadingManager::CreateThread </td>
           <td>(</td>
           <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramname"><em>_args</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -133,8 +133,8 @@ template&lt;typename ... Args&gt; </div>
 
 </div>
 </div>
-<a id="ac638ad71a9db64317ff1ab12fef49db3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac638ad71a9db64317ff1ab12fef49db3">&#9670;&nbsp;</a></span>JoinThread()</h2>
+<a id="af4b5fe84bdbafb215572dad63fef1015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b5fe84bdbafb215572dad63fef1015">&#9670;&nbsp;</a></span>JoinThread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +146,7 @@ template&lt;typename ... Args&gt; </div>
           <td class="memname">void NobleEngine::ThreadingManager::JoinThread </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; std::thread &gt;&#160;</td>
-          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td class="paramname"><em>_thread</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>NobleEngine</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_material.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_material.html">Material</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_material.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_material.html">Material</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_resource.html">Resource</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">//after changing and adding variables make sure to update the load material function in the resource manager.</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_material.html#a17a5cbdfd9c4fd533985c065e5de857f">   20</a></span>&#160;<span class="comment"></span>        std::shared_ptr&lt;Texture&gt; <a class="code" href="struct_noble_engine_1_1_material.html#a17a5cbdfd9c4fd533985c065e5de857f">diffuseTexture</a>;</div>
@@ -95,6 +95,7 @@ $(function() {
 <div class="ttc" id="astruct_noble_engine_1_1_material_html_a2b26e6a70378dee7d0084a20d2c8555a"><div class="ttname"><a href="struct_noble_engine_1_1_material.html#a2b26e6a70378dee7d0084a20d2c8555a">NobleEngine::Material::specularTexture</a></div><div class="ttdeci">std::shared_ptr&lt; Texture &gt; specularTexture</div><div class="ttdef"><b>Definition:</b> Material.h:24</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_material_html"><div class="ttname"><a href="struct_noble_engine_1_1_material.html">NobleEngine::Material</a></div><div class="ttdef"><b>Definition:</b> Material.h:15</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_material_html_af0299dcb2415abb6bd8d27ba5e6c7898"><div class="ttname"><a href="struct_noble_engine_1_1_material.html#af0299dcb2415abb6bd8d27ba5e6c7898">NobleEngine::Material::shininess</a></div><div class="ttdeci">float shininess</div><div class="ttdef"><b>Definition:</b> Material.h:28</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_resource_html"><div class="ttname"><a href="struct_noble_engine_1_1_resource.html">NobleEngine::Resource</a></div><div class="ttdef"><b>Definition:</b> Resource.h:14</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_material_html_a17a5cbdfd9c4fd533985c065e5de857f"><div class="ttname"><a href="struct_noble_engine_1_1_material.html#a17a5cbdfd9c4fd533985c065e5de857f">NobleEngine::Material::diffuseTexture</a></div><div class="ttdeci">std::shared_ptr&lt; Texture &gt; diffuseTexture</div><div class="ttdef"><b>Definition:</b> Material.h:20</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -82,16 +82,23 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_noble_engine_1_1_light_system.html">   10</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_noble_engine_1_1_light_system.html">LightSystem</a> : <span class="keyword">public</span> <a class="code" href="struct_noble_engine_1_1_system.html">System</a>&lt;Light&gt;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7">PreRender</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_light_system.html#a943980a5581e00a23c4cb28b651a9f33">OnRender</a>(std::shared_ptr&lt;Light&gt; comp);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::vector&lt;std::shared_ptr&lt;Light&gt;&gt; closestLights;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        glm::vec3 oldPos;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> SortByDistance(std::shared_ptr&lt;Light&gt;&amp; light1, std::shared_ptr&lt;Light&gt;&amp; light2);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_light_system.html#aa0c7ff547c10acbcefdc148ea9dcaca2">OnUpdate</a>(std::shared_ptr&lt;Light&gt; _comp);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7">PreRender</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_noble_engine_1_1_light_system_html_aa0c7ff547c10acbcefdc148ea9dcaca2"><div class="ttname"><a href="struct_noble_engine_1_1_light_system.html#aa0c7ff547c10acbcefdc148ea9dcaca2">NobleEngine::LightSystem::OnUpdate</a></div><div class="ttdeci">void OnUpdate(std::shared_ptr&lt; Light &gt; _comp)</div><div class="ttdef"><b>Definition:</b> LightSystem.cpp:20</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_system.html">NobleEngine::System</a></div><div class="ttdef"><b>Definition:</b> System.h:102</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_light_system_html_a943980a5581e00a23c4cb28b651a9f33"><div class="ttname"><a href="struct_noble_engine_1_1_light_system.html#a943980a5581e00a23c4cb28b651a9f33">NobleEngine::LightSystem::OnRender</a></div><div class="ttdeci">void OnRender(std::shared_ptr&lt; Light &gt; comp)</div><div class="ttdef"><b>Definition:</b> LightSystem.cpp:45</div></div>
-<div class="ttc" id="astruct_noble_engine_1_1_light_system_html_a66606e77ca3154802c96d120cbdffec7"><div class="ttname"><a href="struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7">NobleEngine::LightSystem::PreRender</a></div><div class="ttdeci">void PreRender()</div><div class="ttdef"><b>Definition:</b> LightSystem.cpp:12</div></div>
+<div class="ttc" id="astruct_noble_engine_1_1_light_system_html_a66606e77ca3154802c96d120cbdffec7"><div class="ttname"><a href="struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7">NobleEngine::LightSystem::PreRender</a></div><div class="ttdeci">void PreRender()</div><div class="ttdef"><b>Definition:</b> LightSystem.cpp:29</div></div>
 <div class="ttc" id="astruct_noble_engine_1_1_light_system_html"><div class="ttname"><a href="struct_noble_engine_1_1_light_system.html">NobleEngine::LightSystem</a></div><div class="ttdef"><b>Definition:</b> LightSystem.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

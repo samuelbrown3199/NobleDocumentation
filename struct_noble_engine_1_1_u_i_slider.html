@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Noble Engine: NobleEngine::UIElement Struct Reference</title>
+<title>Noble Engine: NobleEngine::UISlider Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,54 +63,63 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>NobleEngine</b></li><li class="navelem"><a class="el" href="struct_noble_engine_1_1_u_i_element.html">UIElement</a></li>  </ul>
+<li class="navelem"><b>NobleEngine</b></li><li class="navelem"><a class="el" href="struct_noble_engine_1_1_u_i_slider.html">UISlider</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_noble_engine_1_1_u_i_element-members.html">List of all members</a>  </div>
+<a href="struct_noble_engine_1_1_u_i_slider-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">NobleEngine::UIElement Struct Reference</div>  </div>
+<div class="title">NobleEngine::UISlider Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_u_i_8h_source.html">UI.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for NobleEngine::UIElement:</div>
+Inheritance diagram for NobleEngine::UISlider:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="struct_noble_engine_1_1_u_i_element.png" usemap="#NobleEngine::UIElement_map" alt=""/>
-  <map id="NobleEngine::UIElement_map" name="NobleEngine::UIElement_map">
-<area href="struct_noble_engine_1_1_u_i_box.html" alt="NobleEngine::UIBox" shape="rect" coords="0,56,145,80"/>
-<area href="struct_noble_engine_1_1_u_i_button.html" alt="NobleEngine::UIButton" shape="rect" coords="155,56,300,80"/>
-<area href="struct_noble_engine_1_1_u_i_label.html" alt="NobleEngine::UILabel" shape="rect" coords="310,56,455,80"/>
-<area href="struct_noble_engine_1_1_u_i_slider.html" alt="NobleEngine::UISlider" shape="rect" coords="465,56,610,80"/>
-<area href="struct_noble_engine_1_1_u_i_toggle.html" alt="NobleEngine::UIToggle" shape="rect" coords="620,56,765,80"/>
-<area href="struct_noble_engine_1_1_u_i_window.html" alt="NobleEngine::UIWindow" shape="rect" coords="775,56,920,80"/>
+  <img src="struct_noble_engine_1_1_u_i_slider.png" usemap="#NobleEngine::UISlider_map" alt=""/>
+  <map id="NobleEngine::UISlider_map" name="NobleEngine::UISlider_map">
+<area href="struct_noble_engine_1_1_u_i_element.html" alt="NobleEngine::UIElement" shape="rect" coords="0,0,145,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1383f5d9515d89792350e33e08492dd3"><td class="memItemLeft" align="right" valign="top"><a id="a1383f5d9515d89792350e33e08492dd3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> ()</td></tr>
-<tr class="separator:a1383f5d9515d89792350e33e08492dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a7d2e3080005e4cfeba098d39838d45"><td class="memItemLeft" align="right" valign="top"><a id="a5a7d2e3080005e4cfeba098d39838d45"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRender</b> ()</td></tr>
-<tr class="separator:a5a7d2e3080005e4cfeba098d39838d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7329920fec3f1e974ae84af13c260a04"><td class="memItemLeft" align="right" valign="top"><a id="a7329920fec3f1e974ae84af13c260a04"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UISlider</b> (unsigned int _layer, float _startingValue, float _maxValue, glm::vec2 _screenPos, glm::vec2 _rectScale, std::string _baseTextureLoc, std::string _sliderHandleTexture)</td></tr>
+<tr class="separator:a7329920fec3f1e974ae84af13c260a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f1459f5a280206f4d8e52531299e2e"><td class="memItemLeft" align="right" valign="top"><a id="ae2f1459f5a280206f4d8e52531299e2e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> ()</td></tr>
+<tr class="separator:ae2f1459f5a280206f4d8e52531299e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addba214076db07a8878bd2288f5d6407"><td class="memItemLeft" align="right" valign="top"><a id="addba214076db07a8878bd2288f5d6407"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRender</b> ()</td></tr>
+<tr class="separator:addba214076db07a8878bd2288f5d6407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8cd7eb2ceb7c018dc7062db438b2658b"><td class="memItemLeft" align="right" valign="top"><a id="a8cd7eb2ceb7c018dc7062db438b2658b"></a>
+<tr class="memitem:ae6ddc5057cfb7f700d2d162fe4e1b05f"><td class="memItemLeft" align="right" valign="top"><a id="ae6ddc5057cfb7f700d2d162fe4e1b05f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>maxValue</b> = 0</td></tr>
+<tr class="separator:ae6ddc5057cfb7f700d2d162fe4e1b05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4a052a1e2dd3b3c72ea47d3f811055"><td class="memItemLeft" align="right" valign="top"><a id="a1b4a052a1e2dd3b3c72ea47d3f811055"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>currentValue</b> = 0</td></tr>
+<tr class="separator:a1b4a052a1e2dd3b3c72ea47d3f811055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11da683a7ce249323abe3d3fe20cf05f"><td class="memItemLeft" align="right" valign="top"><a id="a11da683a7ce249323abe3d3fe20cf05f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>currentPercentage</b></td></tr>
+<tr class="separator:a11da683a7ce249323abe3d3fe20cf05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_struct_noble_engine_1_1_u_i_element"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_noble_engine_1_1_u_i_element')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_noble_engine_1_1_u_i_element.html">NobleEngine::UIElement</a></td></tr>
+<tr class="memitem:a8cd7eb2ceb7c018dc7062db438b2658b inherit pub_attribs_struct_noble_engine_1_1_u_i_element"><td class="memItemLeft" align="right" valign="top"><a id="a8cd7eb2ceb7c018dc7062db438b2658b"></a>
 std::shared_ptr&lt; <a class="el" href="struct_noble_engine_1_1_u_i_rect.html">UIRect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>elementRect</b></td></tr>
-<tr class="separator:a8cd7eb2ceb7c018dc7062db438b2658b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a8cd7eb2ceb7c018dc7062db438b2658b inherit pub_attribs_struct_noble_engine_1_1_u_i_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>UI element types inherit from this base class. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>Stores the relevant information for a slider. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/NobleEngine/EngineCore/<a class="el" href="_u_i_8h_source.html">UI.h</a></li>
+<li>src/NobleEngine/EngineCore/UI.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

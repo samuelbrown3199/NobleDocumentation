@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['linkshaderprogram_340',['LinkShaderProgram',['../struct_noble_engine_1_1_shader_program.html#a264510a4f0b16ff320cdb3f8e22205d4',1,'NobleEngine::ShaderProgram']]],
-  ['loadfont_341',['LoadFont',['../struct_noble_engine_1_1_resource_manager.html#a8c7ad120dd160a6551de75677313b669',1,'NobleEngine::ResourceManager']]],
-  ['loadmaterial_342',['LoadMaterial',['../struct_noble_engine_1_1_resource_manager.html#a32dac05b229d3662f9cc3ad543ad90e3',1,'NobleEngine::ResourceManager']]],
-  ['loadogg_343',['LoadOgg',['../struct_noble_engine_1_1_audio_clip.html#a54943cca6759f48b6b7ff224c1b38a10',1,'NobleEngine::AudioClip']]],
-  ['loadresource_344',['LoadResource',['../struct_noble_engine_1_1_resource_manager.html#a0bdd759293886773e71350307f67f16f',1,'NobleEngine::ResourceManager']]]
+  ['linkshaderprogram_342',['LinkShaderProgram',['../struct_noble_engine_1_1_shader_program.html#ac2a5b9fccab01baf8c8d08ac80dbd1d7',1,'NobleEngine::ShaderProgram']]],
+  ['loadfont_343',['LoadFont',['../struct_noble_engine_1_1_resource_manager.html#a86a596a380493c44fd775bb3b502d901',1,'NobleEngine::ResourceManager']]],
+  ['loadmaterial_344',['LoadMaterial',['../struct_noble_engine_1_1_resource_manager.html#a14f3f2a4c413da39208c7f8d3784a011',1,'NobleEngine::ResourceManager::LoadMaterial(std::string _diffusePath)'],['../struct_noble_engine_1_1_resource_manager.html#a5fa92b28901d9b7616986ee1d335d4c7',1,'NobleEngine::ResourceManager::LoadMaterial(std::string _diffusePath, std::string _specularPath)']]],
+  ['loadogg_345',['LoadOgg',['../struct_noble_engine_1_1_audio_clip.html#afc1c865815ea6a58e1a1eb626a03e252',1,'NobleEngine::AudioClip']]],
+  ['loadresource_346',['LoadResource',['../struct_noble_engine_1_1_resource_manager.html#a75ad0916d5288eca14c39b19c5a71ea6',1,'NobleEngine::ResourceManager']]]
 ];
