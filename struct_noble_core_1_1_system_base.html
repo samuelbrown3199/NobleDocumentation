@@ -63,45 +63,191 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>NobleCore</b></li><li class="navelem"><a class="el" href="struct_noble_core_1_1_system_base.html">SystemBase</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_noble_core.html">NobleCore</a></li><li class="navelem"><a class="el" href="struct_noble_core_1_1_system_base.html">SystemBase</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_noble_core_1_1_system_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">NobleCore::SystemBase Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_system_8hpp_source.html">System.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NobleCore::SystemBase:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="struct_noble_core_1_1_system_base.png" usemap="#NobleCore::SystemBase_map" alt=""/>
   <map id="NobleCore::SystemBase_map" name="NobleCore::SystemBase_map">
-<area href="class_noble_core_1_1_system.html" alt="NobleCore::System&lt; T &gt;" shape="rect" coords="0,56,150,80"/>
+<area href="class_noble_core_1_1_system.html" alt="NobleCore::System&lt; T &gt;" shape="rect" coords="0,56,339,80"/>
+<area href="class_noble_core_1_1_system.html" alt="NobleCore::System&lt; NobleComponents::StaticTransform &gt;" shape="rect" coords="349,56,688,80"/>
+<area href="class_noble_core_1_1_system.html" alt="NobleCore::System&lt; NobleComponents::Transform &gt;" shape="rect" coords="698,56,1037,80"/>
+<area href="struct_noble_core_1_1_static_transform_system.html" alt="NobleCore::StaticTransformSystem" shape="rect" coords="349,112,688,136"/>
+<area href="struct_noble_core_1_1_transform_system.html" alt="NobleCore::TransformSystem" shape="rect" coords="698,112,1037,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa2c78fff4646fa2089edcd217a0d3e46"><td class="memItemLeft" align="right" valign="top"><a id="aa2c78fff4646fa2089edcd217a0d3e46"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()=0</td></tr>
+<tr class="memitem:aa2c78fff4646fa2089edcd217a0d3e46"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#aa2c78fff4646fa2089edcd217a0d3e46">Update</a> ()=0</td></tr>
 <tr class="separator:aa2c78fff4646fa2089edcd217a0d3e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a9794c4d25d76d1c646535fedb249c"><td class="memItemLeft" align="right" valign="top"><a id="a33a9794c4d25d76d1c646535fedb249c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> ()=0</td></tr>
+<tr class="memitem:a33a9794c4d25d76d1c646535fedb249c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a33a9794c4d25d76d1c646535fedb249c">Render</a> ()=0</td></tr>
 <tr class="separator:a33a9794c4d25d76d1c646535fedb249c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a70f8ff48b87edfa327c55e700aa22"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a11a70f8ff48b87edfa327c55e700aa22">RemoveComponent</a> (unsigned int _ID)=0</td></tr>
+<tr class="separator:a11a70f8ff48b87edfa327c55e700aa22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ad027215a80c74c7e877e0b4a576800ff"><td class="memItemLeft" align="right" valign="top"><a id="ad027215a80c74c7e877e0b4a576800ff"></a>
-static std::weak_ptr&lt; <a class="el" href="struct_noble_core_1_1_system_base.html">SystemBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self</b></td></tr>
-<tr class="separator:ad027215a80c74c7e877e0b4a576800ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a0eac62611bded3465b2934110577c8ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a0eac62611bded3465b2934110577c8ee">useUpdate</a> = true</td></tr>
+<tr class="separator:a0eac62611bded3465b2934110577c8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64435a0f3c400b2547846fbf709e2b58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a64435a0f3c400b2547846fbf709e2b58">useRender</a> = true</td></tr>
+<tr class="separator:a64435a0f3c400b2547846fbf709e2b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3623f56ebc7339026ed6b9d73d39fa4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a3623f56ebc7339026ed6b9d73d39fa4a">useThreads</a> = false</td></tr>
+<tr class="separator:a3623f56ebc7339026ed6b9d73d39fa4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159c3cefc849dc7cbeb8f786604e5ac5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a159c3cefc849dc7cbeb8f786604e5ac5">maxComponentsPerThread</a> = 1024</td></tr>
+<tr class="separator:a159c3cefc849dc7cbeb8f786604e5ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a11a70f8ff48b87edfa327c55e700aa22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a70f8ff48b87edfa327c55e700aa22">&#9670;&nbsp;</a></span>RemoveComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void NobleCore::SystemBase::RemoveComponent </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_ID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33a9794c4d25d76d1c646535fedb249c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a9794c4d25d76d1c646535fedb249c">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void NobleCore::SystemBase::Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2c78fff4646fa2089edcd217a0d3e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c78fff4646fa2089edcd217a0d3e46">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void NobleCore::SystemBase::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a159c3cefc849dc7cbeb8f786604e5ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159c3cefc849dc7cbeb8f786604e5ac5">&#9670;&nbsp;</a></span>maxComponentsPerThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NobleCore::SystemBase::maxComponentsPerThread = 1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines how many components a thread should handle. </p>
+
+</div>
+</div>
+<a id="a64435a0f3c400b2547846fbf709e2b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64435a0f3c400b2547846fbf709e2b58">&#9670;&nbsp;</a></span>useRender</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NobleCore::SystemBase::useRender = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3623f56ebc7339026ed6b9d73d39fa4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3623f56ebc7339026ed6b9d73d39fa4a">&#9670;&nbsp;</a></span>useThreads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NobleCore::SystemBase::useThreads = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eac62611bded3465b2934110577c8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eac62611bded3465b2934110577c8ee">&#9670;&nbsp;</a></span>useUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NobleCore::SystemBase::useUpdate = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/NobleEngine/ECS/<a class="el" href="_system_8h_source.html">System.h</a></li>
+<li>src/NobleEngine/ECS/<a class="el" href="_system_8hpp_source.html">System.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

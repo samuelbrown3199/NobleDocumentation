@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>NobleCore</b></li><li class="navelem"><a class="el" href="struct_noble_core_1_1_transform_system.html">TransformSystem</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_noble_core.html">NobleCore</a></li><li class="navelem"><a class="el" href="struct_noble_core_1_1_transform_system.html">TransformSystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,6 +74,8 @@ $(function() {
 <div class="title">NobleCore::TransformSystem Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_transform_system_8hpp_source.html">TransformSystem.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NobleCore::TransformSystem:</div>
 <div class="dyncontent">
@@ -87,23 +89,56 @@ Inheritance diagram for NobleCore::TransformSystem:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a553ed2888b4af5870cebe2a2a4a762db"><td class="memItemLeft" align="right" valign="top"><a id="a553ed2888b4af5870cebe2a2a4a762db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (<a class="el" href="struct_noble_components_1_1_transform.html">NobleComponents::Transform</a> *comp)</td></tr>
+<tr class="memitem:a553ed2888b4af5870cebe2a2a4a762db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_transform_system.html#a553ed2888b4af5870cebe2a2a4a762db">OnUpdate</a> (<a class="el" href="struct_noble_components_1_1_transform.html">NobleComponents::Transform</a> *comp)</td></tr>
 <tr class="separator:a553ed2888b4af5870cebe2a2a4a762db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_attribs_struct_noble_core_1_1_system_base"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_struct_noble_core_1_1_system_base')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="struct_noble_core_1_1_system_base.html">NobleCore::SystemBase</a></td></tr>
-<tr class="memitem:ad027215a80c74c7e877e0b4a576800ff inherit pub_static_attribs_struct_noble_core_1_1_system_base"><td class="memItemLeft" align="right" valign="top"><a id="ad027215a80c74c7e877e0b4a576800ff"></a>
-static std::weak_ptr&lt; <a class="el" href="struct_noble_core_1_1_system_base.html">SystemBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>self</b></td></tr>
-<tr class="separator:ad027215a80c74c7e877e0b4a576800ff inherit pub_static_attribs_struct_noble_core_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_struct_noble_core_1_1_system_base"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_noble_core_1_1_system_base')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_noble_core_1_1_system_base.html">NobleCore::SystemBase</a></td></tr>
+<tr class="memitem:a0eac62611bded3465b2934110577c8ee inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a0eac62611bded3465b2934110577c8ee">useUpdate</a> = true</td></tr>
+<tr class="separator:a0eac62611bded3465b2934110577c8ee inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64435a0f3c400b2547846fbf709e2b58 inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a64435a0f3c400b2547846fbf709e2b58">useRender</a> = true</td></tr>
+<tr class="separator:a64435a0f3c400b2547846fbf709e2b58 inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3623f56ebc7339026ed6b9d73d39fa4a inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a3623f56ebc7339026ed6b9d73d39fa4a">useThreads</a> = false</td></tr>
+<tr class="separator:a3623f56ebc7339026ed6b9d73d39fa4a inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159c3cefc849dc7cbeb8f786604e5ac5 inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_system_base.html#a159c3cefc849dc7cbeb8f786604e5ac5">maxComponentsPerThread</a> = 1024</td></tr>
+<tr class="separator:a159c3cefc849dc7cbeb8f786604e5ac5 inherit pub_attribs_struct_noble_core_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_noble_core_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_noble_core_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_noble_core_1_1_system.html">NobleCore::System&lt; NobleComponents::Transform &gt;</a></td></tr>
-<tr class="memitem:accc23cfaf2264ed33aea85b8355f3536 inherit pro_methods_class_noble_core_1_1_system"><td class="memItemLeft" align="right" valign="top"><a id="accc23cfaf2264ed33aea85b8355f3536"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRender</b> (<a class="el" href="struct_noble_components_1_1_transform.html">NobleComponents::Transform</a> *comp)</td></tr>
+<tr class="memitem:accc23cfaf2264ed33aea85b8355f3536 inherit pro_methods_class_noble_core_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_noble_core_1_1_system.html#accc23cfaf2264ed33aea85b8355f3536">OnRender</a> (<a class="el" href="struct_noble_components_1_1_transform.html">NobleComponents::Transform</a> *comp)</td></tr>
 <tr class="separator:accc23cfaf2264ed33aea85b8355f3536 inherit pro_methods_class_noble_core_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a553ed2888b4af5870cebe2a2a4a762db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553ed2888b4af5870cebe2a2a4a762db">&#9670;&nbsp;</a></span>OnUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NobleCore::TransformSystem::OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_noble_components_1_1_transform.html">NobleComponents::Transform</a> *&#160;</td>
+          <td class="paramname"><em>comp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overwrite this to create functionality on a component every update. </p>
+
+<p>Reimplemented from <a class="el" href="class_noble_core_1_1_system.html#a1d8f43c8c46c1809469406a9278ddea3">NobleCore::System&lt; NobleComponents::Transform &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/NobleEngine/Components/<a class="el" href="_transform_system_8hpp_source.html">TransformSystem.hpp</a></li>
+<li>src/NobleEngine/Systems/<a class="el" href="_transform_system_8hpp_source.html">TransformSystem.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
