@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directionallight_235',['DirectionalLight',['../struct_noble_engine_1_1_directional_light.html',1,'NobleEngine']]]
+  ['entity_65',['Entity',['../struct_noble_core_1_1_entity.html',1,'NobleCore']]]
 ];

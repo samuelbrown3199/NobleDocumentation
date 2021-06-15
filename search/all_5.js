@@ -1,8 +1,17 @@
 var searchData=
 [
-  ['farplane_65',['farPlane',['../struct_noble_engine_1_1_screen.html#abcc13bbf2c851cc315699591776bf800',1,'NobleEngine::Screen']]],
-  ['fieldofview_66',['fieldOfView',['../struct_noble_engine_1_1_screen.html#a55c7147a633c31197da5a5bb793675f7',1,'NobleEngine::Screen']]],
-  ['font_67',['Font',['../struct_noble_engine_1_1_font.html',1,'NobleEngine::Font'],['../struct_noble_engine_1_1_font.html#afc7b36e2e664da10b390dd5be52dffd1',1,'NobleEngine::Font::Font()']]],
-  ['fontlibrary_68',['fontLibrary',['../class_noble_engine_1_1_application.html#ab7c0013efe1c8dad7295ad8660d984ef',1,'NobleEngine::Application']]],
-  ['fontpixelsize_69',['fontPixelSize',['../struct_noble_engine_1_1_font.html#a125f3055c4eae4122521b6df3585f84f',1,'NobleEngine::Font']]]
+  ['getcomponent_16',['GetComponent',['../struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9',1,'NobleCore::Entity']]],
+  ['getentity_17',['GetEntity',['../class_noble_core_1_1_application.html#ab3410b3e64b042bf1e22c5bdeb69c94d',1,'NobleCore::Application']]],
+  ['getkey_18',['GetKey',['../class_noble_core_1_1_input_manager.html#a48334b368742177bb03684c0cf38ce39',1,'NobleCore::InputManager']]],
+  ['getkeydown_19',['GetKeyDown',['../class_noble_core_1_1_input_manager.html#a8af164bd061c69fef431e037c1b80ede',1,'NobleCore::InputManager']]],
+  ['getkeyup_20',['GetKeyUp',['../class_noble_core_1_1_input_manager.html#a0ab15fd34d4f71df7c033b15a30a2612',1,'NobleCore::InputManager']]],
+  ['getmousebutton_21',['GetMouseButton',['../class_noble_core_1_1_input_manager.html#a62e43268e9031603cf68791ed4d6fde5',1,'NobleCore::InputManager']]],
+  ['getmousebuttondown_22',['GetMouseButtonDown',['../class_noble_core_1_1_input_manager.html#a1acac73384e47e208f8de03f959c4c71',1,'NobleCore::InputManager']]],
+  ['getmousebuttonup_23',['GetMouseButtonUp',['../class_noble_core_1_1_input_manager.html#ab74c7b12f6120978f253e923ae468f0e',1,'NobleCore::InputManager']]],
+  ['getmouseposition_24',['GetMousePosition',['../class_noble_core_1_1_input_manager.html#a8fa80406656a07b03382e02e6660e21f',1,'NobleCore::InputManager']]],
+  ['getscreenheight_25',['GetScreenHeight',['../class_noble_core_1_1_screen.html#ac613d1e58741a8222a1dc2cd2f49b8d8',1,'NobleCore::Screen']]],
+  ['getscreenwidth_26',['GetScreenWidth',['../class_noble_core_1_1_screen.html#ac00a517af70b1dd0cde7a1a6de84f9b1',1,'NobleCore::Screen']]],
+  ['getwindow_27',['GetWindow',['../class_noble_core_1_1_screen.html#aedef6e47a96aa29f5dc3e6603b7c1ae6',1,'NobleCore::Screen']]],
+  ['getwindowname_28',['GetWindowName',['../class_noble_core_1_1_screen.html#acdf8f4f1987ed717802118934e3145cd',1,'NobleCore::Screen']]],
+  ['graphicsoptions_29',['GraphicsOptions',['../struct_noble_core_1_1_graphics_options.html',1,'NobleCore']]]
 ];

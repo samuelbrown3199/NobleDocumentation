@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['prerender_352',['PreRender',['../struct_noble_engine_1_1_system.html#ad9508cb2ecbc418c9c302b9efa6c615a',1,'NobleEngine::System::PreRender()'],['../struct_noble_engine_1_1_light_system.html#a66606e77ca3154802c96d120cbdffec7',1,'NobleEngine::LightSystem::PreRender()']]],
-  ['preupdate_353',['PreUpdate',['../struct_noble_engine_1_1_system.html#aa31b32d4d63d57031eddee6988039438',1,'NobleEngine::System']]],
-  ['printoutperformancestats_354',['PrintOutPerformanceStats',['../struct_noble_engine_1_1_performance_stats.html#a50d72dd49d3c048e872d8127d10f5f7d',1,'NobleEngine::PerformanceStats']]]
+  ['unloadunusedresources_109',['UnloadUnusedResources',['../struct_noble_core_1_1_resource_manager.html#a0625b831170b5327eedde102234582a6',1,'NobleCore::ResourceManager']]],
+  ['updatescreensize_110',['UpdateScreenSize',['../class_noble_core_1_1_screen.html#af9b30783c5734a0be516060ed91df931',1,'NobleCore::Screen']]]
 ];

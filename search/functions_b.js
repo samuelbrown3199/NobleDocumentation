@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainloop_347',['MainLoop',['../class_noble_engine_1_1_application.html#a10c9701dbe933e4da64227012fc8cb31',1,'NobleEngine::Application']]]
+  ['screen_106',['Screen',['../class_noble_core_1_1_screen.html#aef2a5b01991ba4b0e331c3296669c6c0',1,'NobleCore::Screen']]],
+  ['setwindowfullscreen_107',['SetWindowFullScreen',['../class_noble_core_1_1_screen.html#a43ee354e8d55b4e08529a1ef7f4057ab',1,'NobleCore::Screen']]]
 ];

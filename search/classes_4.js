@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['font_238',['Font',['../struct_noble_engine_1_1_font.html',1,'NobleEngine']]]
+  ['inputmanager_67',['InputManager',['../class_noble_core_1_1_input_manager.html',1,'NobleCore']]]
 ];

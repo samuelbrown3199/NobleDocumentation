@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['quadratic_141',['quadratic',['../struct_noble_engine_1_1_light.html#a2b3dcd08e52c5dadff00bd20b0b23b44',1,'NobleEngine::Light']]],
-  ['quadvao_142',['quadVAO',['../struct_noble_engine_1_1_primitive_shapes.html#a5d370ee62a16735e56ac139e69152c60',1,'NobleEngine::PrimitiveShapes']]]
+  ['vsync_59',['vsync',['../struct_noble_core_1_1_graphics_options.html#aac1e9899b26bd8e413ed1d3f67106670',1,'NobleCore::GraphicsOptions']]]
 ];

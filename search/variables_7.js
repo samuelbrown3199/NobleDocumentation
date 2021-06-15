@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['intensity_396',['intensity',['../struct_noble_engine_1_1_light.html#a1fa05903f45de073c8617b92ba0c9192',1,'NobleEngine::Light::intensity()'],['../struct_noble_engine_1_1_directional_light.html#aaca43a621d45935c6c9026ecaa5eb576',1,'NobleEngine::DirectionalLight::intensity()']]]
+  ['vsync_123',['vsync',['../struct_noble_core_1_1_graphics_options.html#aac1e9899b26bd8e413ed1d3f67106670',1,'NobleCore::GraphicsOptions']]]
 ];
