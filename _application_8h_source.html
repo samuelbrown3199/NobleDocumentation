@@ -71,113 +71,128 @@ $(function() {
 <div class="title">Application.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ThreadingManager.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Screen.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Renderer.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;AudioManager.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../ECS/Entity.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../ECS/System.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>NobleCore</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">struct </span>SystemBase;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">struct </span>Entity;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef APPLICATION_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define APPLICATION_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;PerformanceStats.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;ThreadingManager.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Screen.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Renderer.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;PhysicsWorld.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;AudioManager.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../ECS/Entity.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../ECS/System.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Components/Camera.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_application.html">Application</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_input_manager.html">InputManager</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>NobleCore</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">struct </span>SystemBase;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">struct </span>Entity;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> loop;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">static</span> std::weak_ptr&lt;Application&gt; <span class="keyword">self</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;ThreadingManager&gt; threadingManager;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Screen&gt; screen;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Renderer&gt; renderer;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;AudioManager&gt; audioManager;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">static</span> std::vector&lt;Entity*&gt; deletionEntities;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">static</span> std::vector&lt;std::shared_ptr&lt;SystemBase&gt;&gt; componentSystems;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> BindCoreSystems();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CleanupDeletionEntities();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CleanupEngine();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">   70</a></span>&#160;        <span class="keyword">static</span> std::vector&lt;Entity&gt; <a class="code" href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">entities</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Application&gt; <a class="code" href="class_noble_core_1_1_application.html#aff3fdbf10635c7da183ee84b1394dc24">InitializeEngine</a>(std::string _windowName, GraphicsAPI _graphicsAPI, <span class="keywordtype">int</span> _windowWidth, <span class="keywordtype">int</span> _windowHeightt);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_application.html#ac5ab415888cee28a32892d11e2dd7819">MainEngineLoop</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_core_1_1_entity.html">Entity</a>* <a class="code" href="class_noble_core_1_1_application.html#a204a1b0ac34e4b3e9a5835260d1fba82">CreateEntity</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_application.html#ad3efb6230704410443f77acc7fdf38c9">DeleteEntity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _ID);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_core_1_1_entity.html">Entity</a>* <a class="code" href="class_noble_core_1_1_application.html#ab3410b3e64b042bf1e22c5bdeb69c94d">GetEntity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _ID);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#ab7b7eb37b68430ad9edc61fa39a73310">   96</a></span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code" href="class_noble_core_1_1_application.html#ab7b7eb37b68430ad9edc61fa39a73310">BindSystem</a>(<span class="keywordtype">bool</span> _useUpdate, <span class="keywordtype">bool</span> _useRender)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::shared_ptr&lt;T&gt; temp;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sys = 0; sys &lt; componentSystems.size(); sys++)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                temp = std::dynamic_pointer_cast&lt;T&gt;(componentSystems.at(sys));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">if</span> (temp)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;System is already bound!!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            std::shared_ptr&lt;T&gt; system = std::make_shared&lt;T&gt;();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            system-&gt;self = system;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            system-&gt;useUpdate = _useUpdate;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            system-&gt;useRender = _useRender;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            system-&gt;useThreads = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            system-&gt;InitializeSystem();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            componentSystems.push_back(system);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span> system;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#af5deb515d5e44b627549ec843125118d">  122</a></span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code" href="class_noble_core_1_1_application.html#af5deb515d5e44b627549ec843125118d">BindSystem</a>(<span class="keywordtype">bool</span> _useUpdate, <span class="keywordtype">bool</span> _useRender, <span class="keywordtype">int</span> _componentsPerThread)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            std::shared_ptr&lt;T&gt; temp;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sys = 0; sys &lt; componentSystems.size(); sys++)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                temp = std::dynamic_pointer_cast&lt;T&gt;(componentSystems.at(sys));</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordflow">if</span> (temp)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;System is already bound!!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            std::shared_ptr&lt;T&gt; system = std::make_shared&lt;T&gt;();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            system-&gt;self = system;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            system-&gt;useUpdate = _useUpdate;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            system-&gt;useRender = _useRender;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            system-&gt;useThreads = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            system-&gt;maxComponentsPerThread = _componentsPerThread;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            system-&gt;InitializeSystem();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            componentSystems.push_back(system);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">return</span> system;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    };</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_application.html">Application</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_input_manager.html">InputManager</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> loop;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">static</span> std::weak_ptr&lt;Application&gt; <span class="keyword">self</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_core_1_1_performance_stats.html">PerformanceStats</a> performanceStats;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;ThreadingManager&gt; threadingManager;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Screen&gt; screen;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Renderer&gt; renderer;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;AudioManager&gt; audioManager;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">static</span> std::vector&lt;Entity*&gt; deletionEntities;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">static</span> std::vector&lt;std::shared_ptr&lt;SystemBase&gt;&gt; componentSystems;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> BindCoreSystems();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CleanupDeletionEntities();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> CleanupEngine();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">   81</a></span>&#160;        <span class="keyword">static</span> std::vector&lt;Entity&gt; <a class="code" href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">entities</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a305786a8618433c0e09ef0af89721ed7">   85</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_components_1_1_camera.html">NobleComponents::Camera</a>* <a class="code" href="class_noble_core_1_1_application.html#a305786a8618433c0e09ef0af89721ed7">mainCam</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a34e36dcf80f2b59a1604d832b7ea847c">   89</a></span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;PhysicsWorld&gt; <a class="code" href="class_noble_core_1_1_application.html#a34e36dcf80f2b59a1604d832b7ea847c">physicsWorld</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;Application&gt; <a class="code" href="class_noble_core_1_1_application.html#aff3fdbf10635c7da183ee84b1394dc24">InitializeEngine</a>(std::string _windowName, GraphicsAPI _graphicsAPI, <span class="keywordtype">int</span> _windowWidth, <span class="keywordtype">int</span> _windowHeightt);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_application.html#ac5ab415888cee28a32892d11e2dd7819">MainEngineLoop</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_core_1_1_entity.html">Entity</a>* <a class="code" href="class_noble_core_1_1_application.html#a204a1b0ac34e4b3e9a5835260d1fba82">CreateEntity</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_application.html#ad3efb6230704410443f77acc7fdf38c9">DeleteEntity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _ID);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">static</span> <a class="code" href="struct_noble_core_1_1_entity.html">Entity</a>* <a class="code" href="class_noble_core_1_1_application.html#ab3410b3e64b042bf1e22c5bdeb69c94d">GetEntity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _ID);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a1cee83674202d575eb4d673277b54437">  114</a></span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code" href="class_noble_core_1_1_application.html#a1cee83674202d575eb4d673277b54437">BindSystem</a>(SystemUsage _usage)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            std::shared_ptr&lt;T&gt; temp;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sys = 0; sys &lt; componentSystems.size(); sys++)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                temp = std::dynamic_pointer_cast&lt;T&gt;(componentSystems.at(sys));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">if</span> (temp)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;System is already bound!!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::shared_ptr&lt;T&gt; system = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            system-&gt;self = system;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            system-&gt;systemUsage = _usage;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            system-&gt;useThreads = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            system-&gt;InitializeSystem();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            componentSystems.push_back(system);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> system;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_application.html#a6ce5b6359febcd2ab3e79eb18dee0288">  139</a></span>&#160;        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code" href="class_noble_core_1_1_application.html#a6ce5b6359febcd2ab3e79eb18dee0288">BindSystem</a>(SystemUsage _usage, <span class="keywordtype">int</span> _componentsPerThread)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            std::shared_ptr&lt;T&gt; temp;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sys = 0; sys &lt; componentSystems.size(); sys++)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                temp = std::dynamic_pointer_cast&lt;T&gt;(componentSystems.at(sys));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">if</span> (temp)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;System is already bound!!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            std::shared_ptr&lt;T&gt; system = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            system-&gt;self = system;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            system-&gt;systemUsage = _usage;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            system-&gt;useThreads = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            system-&gt;maxComponentsPerThread = _componentsPerThread;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            system-&gt;InitializeSystem();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            componentSystems.push_back(system);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">return</span> system;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_application.html#a1044fcd4f9d2a2966265826b3a8a2ea2">SetMainCamera</a>(<a class="code" href="struct_noble_components_1_1_camera.html">NobleComponents::Camera</a>* _mainCam);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    };</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_noble_core_1_1_application_html_a1b1fc373bb53c8189879f173d4664dc1"><div class="ttname"><a href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">NobleCore::Application::entities</a></div><div class="ttdeci">static std::vector&lt; Entity &gt; entities</div><div class="ttdef"><b>Definition:</b> Application.h:70</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_ab7b7eb37b68430ad9edc61fa39a73310"><div class="ttname"><a href="class_noble_core_1_1_application.html#ab7b7eb37b68430ad9edc61fa39a73310">NobleCore::Application::BindSystem</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; BindSystem(bool _useUpdate, bool _useRender)</div><div class="ttdef"><b>Definition:</b> Application.h:96</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_ac5ab415888cee28a32892d11e2dd7819"><div class="ttname"><a href="class_noble_core_1_1_application.html#ac5ab415888cee28a32892d11e2dd7819">NobleCore::Application::MainEngineLoop</a></div><div class="ttdeci">static void MainEngineLoop()</div><div class="ttdef"><b>Definition:</b> Application.cpp:64</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_aff3fdbf10635c7da183ee84b1394dc24"><div class="ttname"><a href="class_noble_core_1_1_application.html#aff3fdbf10635c7da183ee84b1394dc24">NobleCore::Application::InitializeEngine</a></div><div class="ttdeci">static std::shared_ptr&lt; Application &gt; InitializeEngine(std::string _windowName, GraphicsAPI _graphicsAPI, int _windowWidth, int _windowHeightt)</div><div class="ttdef"><b>Definition:</b> Application.cpp:45</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_ad3efb6230704410443f77acc7fdf38c9"><div class="ttname"><a href="class_noble_core_1_1_application.html#ad3efb6230704410443f77acc7fdf38c9">NobleCore::Application::DeleteEntity</a></div><div class="ttdeci">static void DeleteEntity(unsigned int _ID)</div><div class="ttdef"><b>Definition:</b> Application.cpp:114</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_a204a1b0ac34e4b3e9a5835260d1fba82"><div class="ttname"><a href="class_noble_core_1_1_application.html#a204a1b0ac34e4b3e9a5835260d1fba82">NobleCore::Application::CreateEntity</a></div><div class="ttdeci">static Entity * CreateEntity()</div><div class="ttdef"><b>Definition:</b> Application.cpp:100</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html"><div class="ttname"><a href="class_noble_core_1_1_application.html">NobleCore::Application</a></div><div class="ttdef"><b>Definition:</b> Application.h:25</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_ab3410b3e64b042bf1e22c5bdeb69c94d"><div class="ttname"><a href="class_noble_core_1_1_application.html#ab3410b3e64b042bf1e22c5bdeb69c94d">NobleCore::Application::GetEntity</a></div><div class="ttdeci">static Entity * GetEntity(unsigned int _ID)</div><div class="ttdef"><b>Definition:</b> Application.cpp:122</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a1b1fc373bb53c8189879f173d4664dc1"><div class="ttname"><a href="class_noble_core_1_1_application.html#a1b1fc373bb53c8189879f173d4664dc1">NobleCore::Application::entities</a></div><div class="ttdeci">static std::vector&lt; Entity &gt; entities</div><div class="ttdef"><b>Definition:</b> Application.h:81</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a34e36dcf80f2b59a1604d832b7ea847c"><div class="ttname"><a href="class_noble_core_1_1_application.html#a34e36dcf80f2b59a1604d832b7ea847c">NobleCore::Application::physicsWorld</a></div><div class="ttdeci">static std::shared_ptr&lt; PhysicsWorld &gt; physicsWorld</div><div class="ttdef"><b>Definition:</b> Application.h:89</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_ac5ab415888cee28a32892d11e2dd7819"><div class="ttname"><a href="class_noble_core_1_1_application.html#ac5ab415888cee28a32892d11e2dd7819">NobleCore::Application::MainEngineLoop</a></div><div class="ttdeci">static void MainEngineLoop()</div><div class="ttdef"><b>Definition:</b> Application.cpp:75</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a6ce5b6359febcd2ab3e79eb18dee0288"><div class="ttname"><a href="class_noble_core_1_1_application.html#a6ce5b6359febcd2ab3e79eb18dee0288">NobleCore::Application::BindSystem</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; BindSystem(SystemUsage _usage, int _componentsPerThread)</div><div class="ttdef"><b>Definition:</b> Application.h:139</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a1044fcd4f9d2a2966265826b3a8a2ea2"><div class="ttname"><a href="class_noble_core_1_1_application.html#a1044fcd4f9d2a2966265826b3a8a2ea2">NobleCore::Application::SetMainCamera</a></div><div class="ttdeci">static void SetMainCamera(NobleComponents::Camera *_mainCam)</div><div class="ttdef"><b>Definition:</b> Application.cpp:158</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a305786a8618433c0e09ef0af89721ed7"><div class="ttname"><a href="class_noble_core_1_1_application.html#a305786a8618433c0e09ef0af89721ed7">NobleCore::Application::mainCam</a></div><div class="ttdeci">static NobleComponents::Camera * mainCam</div><div class="ttdef"><b>Definition:</b> Application.h:85</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a1cee83674202d575eb4d673277b54437"><div class="ttname"><a href="class_noble_core_1_1_application.html#a1cee83674202d575eb4d673277b54437">NobleCore::Application::BindSystem</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; BindSystem(SystemUsage _usage)</div><div class="ttdef"><b>Definition:</b> Application.h:114</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_aff3fdbf10635c7da183ee84b1394dc24"><div class="ttname"><a href="class_noble_core_1_1_application.html#aff3fdbf10635c7da183ee84b1394dc24">NobleCore::Application::InitializeEngine</a></div><div class="ttdeci">static std::shared_ptr&lt; Application &gt; InitializeEngine(std::string _windowName, GraphicsAPI _graphicsAPI, int _windowWidth, int _windowHeightt)</div><div class="ttdef"><b>Definition:</b> Application.cpp:55</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_ad3efb6230704410443f77acc7fdf38c9"><div class="ttname"><a href="class_noble_core_1_1_application.html#ad3efb6230704410443f77acc7fdf38c9">NobleCore::Application::DeleteEntity</a></div><div class="ttdeci">static void DeleteEntity(unsigned int _ID)</div><div class="ttdef"><b>Definition:</b> Application.cpp:141</div></div>
+<div class="ttc" id="astruct_noble_components_1_1_camera_html"><div class="ttname"><a href="struct_noble_components_1_1_camera.html">NobleComponents::Camera</a></div><div class="ttdef"><b>Definition:</b> Camera.hpp:21</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_a204a1b0ac34e4b3e9a5835260d1fba82"><div class="ttname"><a href="class_noble_core_1_1_application.html#a204a1b0ac34e4b3e9a5835260d1fba82">NobleCore::Application::CreateEntity</a></div><div class="ttdeci">static Entity * CreateEntity()</div><div class="ttdef"><b>Definition:</b> Application.cpp:127</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html"><div class="ttname"><a href="class_noble_core_1_1_application.html">NobleCore::Application</a></div><div class="ttdef"><b>Definition:</b> Application.h:32</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_application_html_ab3410b3e64b042bf1e22c5bdeb69c94d"><div class="ttname"><a href="class_noble_core_1_1_application.html#ab3410b3e64b042bf1e22c5bdeb69c94d">NobleCore::Application::GetEntity</a></div><div class="ttdeci">static Entity * GetEntity(unsigned int _ID)</div><div class="ttdef"><b>Definition:</b> Application.cpp:149</div></div>
+<div class="ttc" id="astruct_noble_core_1_1_performance_stats_html"><div class="ttname"><a href="struct_noble_core_1_1_performance_stats.html">NobleCore::PerformanceStats</a></div><div class="ttdef"><b>Definition:</b> PerformanceStats.h:16</div></div>
 <div class="ttc" id="aclass_noble_core_1_1_input_manager_html"><div class="ttname"><a href="class_noble_core_1_1_input_manager.html">NobleCore::InputManager</a></div><div class="ttdef"><b>Definition:</b> InputManager.h:16</div></div>
 <div class="ttc" id="astruct_noble_core_1_1_entity_html"><div class="ttname"><a href="struct_noble_core_1_1_entity.html">NobleCore::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:11</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_application_html_af5deb515d5e44b627549ec843125118d"><div class="ttname"><a href="class_noble_core_1_1_application.html#af5deb515d5e44b627549ec843125118d">NobleCore::Application::BindSystem</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; BindSystem(bool _useUpdate, bool _useRender, int _componentsPerThread)</div><div class="ttdef"><b>Definition:</b> Application.h:122</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

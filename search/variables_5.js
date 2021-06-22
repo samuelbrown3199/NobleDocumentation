@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['position_123',['position',['../struct_noble_components_1_1_static_transform.html#a4600422bc2445b14dbe4e05ff840ab96',1,'NobleComponents::StaticTransform::position()'],['../struct_noble_components_1_1_transform.html#a0323f43a71322df14f72483ce4b01b1b',1,'NobleComponents::Transform::position()']]]
+  ['farplane_201',['farPlane',['../struct_noble_components_1_1_camera.html#a6fff82dd48288f1e800ea5c792d8eb1b',1,'NobleComponents::Camera']]],
+  ['fieldofview_202',['fieldOfView',['../struct_noble_components_1_1_camera.html#a94bf5470372580052ac7c19993bc3e9f',1,'NobleComponents::Camera']]]
 ];

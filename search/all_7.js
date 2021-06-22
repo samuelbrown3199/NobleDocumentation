@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['loadogg_33',['LoadOgg',['../struct_noble_core_1_1_audio_clip.html#a3ec1e6446a2e743d5b5bbadf3bf5b913',1,'NobleCore::AudioClip']]],
-  ['loadresource_34',['LoadResource',['../struct_noble_core_1_1_resource_manager.html#a96961c36d4fcb9eb055d58f885a3f698',1,'NobleCore::ResourceManager']]]
+  ['initializeengine_52',['InitializeEngine',['../class_noble_core_1_1_application.html#aff3fdbf10635c7da183ee84b1394dc24',1,'NobleCore::Application']]],
+  ['inputmanager_53',['InputManager',['../class_noble_core_1_1_input_manager.html',1,'NobleCore']]]
 ];

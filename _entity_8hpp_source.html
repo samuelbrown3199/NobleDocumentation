@@ -94,47 +94,49 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (!alreadyHasComponent)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                T comp;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                comp.entityID = <a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                T::componentData.push_back(comp);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">return</span> &amp;T::componentData.at(T::componentData.size() - 1);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> alreadyHasComponent;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args&gt;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">   50</a></span>&#160;        T* <a class="code" href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">AddComponent</a>(Args&amp;&amp;... _args)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            T* alreadyHasComponent = GetComponent&lt;T&gt;();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (!alreadyHasComponent)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                T comp(std::forward&lt;Args&gt;(_args)...);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                comp.entityID = <a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                T::componentData.push_back(comp);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> &amp;T::componentData.at(T::componentData.size() - 1);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> alreadyHasComponent;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">   67</a></span>&#160;        T* <a class="code" href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">GetComponent</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            T* temp = T::GetComponent(<a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">   76</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">RemoveComponent</a>()</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            T::RemoveComponent(<a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                comp.OnInitialize();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                comp.entityID = <a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                T::componentData.push_back(comp);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span> &amp;T::componentData.at(T::componentData.size() - 1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> alreadyHasComponent;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">   51</a></span>&#160;        T* <a class="code" href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">AddComponent</a>(Args&amp;&amp;... _args)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            T* alreadyHasComponent = GetComponent&lt;T&gt;();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (!alreadyHasComponent)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                T comp;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                comp.OnInitialize(std::forward&lt;Args&gt;(_args)...);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                comp.entityID = <a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                T::componentData.push_back(comp);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> &amp;T::componentData.at(T::componentData.size() - 1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> alreadyHasComponent;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">   69</a></span>&#160;        T* <a class="code" href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">GetComponent</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            T* temp = T::GetComponent(<a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">   78</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">RemoveComponent</a>()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            T::RemoveComponent(<a class="code" href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">entityID</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    };</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_noble_core_1_1_entity_html_ae288a285da8214dee78f086b0b7d0e24"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">NobleCore::Entity::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent()</div><div class="ttdef"><b>Definition:</b> Entity.hpp:76</div></div>
+<div class="ttc" id="astruct_noble_core_1_1_entity_html_ae288a285da8214dee78f086b0b7d0e24"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#ae288a285da8214dee78f086b0b7d0e24">NobleCore::Entity::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent()</div><div class="ttdef"><b>Definition:</b> Entity.hpp:78</div></div>
 <div class="ttc" id="astruct_noble_core_1_1_entity_html_aa6fe3e93f50f5d0c5b3afeaf31290dd5"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#aa6fe3e93f50f5d0c5b3afeaf31290dd5">NobleCore::Entity::AddComponent</a></div><div class="ttdeci">T * AddComponent()</div><div class="ttdef"><b>Definition:</b> Entity.hpp:33</div></div>
-<div class="ttc" id="astruct_noble_core_1_1_entity_html_ac2b8edf8a871cbef0eaad8298dad59e1"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">NobleCore::Entity::AddComponent</a></div><div class="ttdeci">T * AddComponent(Args &amp;&amp;... _args)</div><div class="ttdef"><b>Definition:</b> Entity.hpp:50</div></div>
-<div class="ttc" id="astruct_noble_core_1_1_entity_html_a0a37e34df6f384958d5a43b3aaa705c9"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">NobleCore::Entity::GetComponent</a></div><div class="ttdeci">T * GetComponent()</div><div class="ttdef"><b>Definition:</b> Entity.hpp:67</div></div>
+<div class="ttc" id="astruct_noble_core_1_1_entity_html_ac2b8edf8a871cbef0eaad8298dad59e1"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#ac2b8edf8a871cbef0eaad8298dad59e1">NobleCore::Entity::AddComponent</a></div><div class="ttdeci">T * AddComponent(Args &amp;&amp;... _args)</div><div class="ttdef"><b>Definition:</b> Entity.hpp:51</div></div>
+<div class="ttc" id="astruct_noble_core_1_1_entity_html_a0a37e34df6f384958d5a43b3aaa705c9"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#a0a37e34df6f384958d5a43b3aaa705c9">NobleCore::Entity::GetComponent</a></div><div class="ttdeci">T * GetComponent()</div><div class="ttdef"><b>Definition:</b> Entity.hpp:69</div></div>
 <div class="ttc" id="astruct_noble_core_1_1_entity_html_a33abe2d43158dd94ee8bab7f7f5f52d0"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#a33abe2d43158dd94ee8bab7f7f5f52d0">NobleCore::Entity::entityID</a></div><div class="ttdeci">unsigned int entityID</div><div class="ttdef"><b>Definition:</b> Entity.hpp:15</div></div>
 <div class="ttc" id="astruct_noble_core_1_1_entity_html_ae1ba7d9945c1923868d8875382a90cb8"><div class="ttname"><a href="struct_noble_core_1_1_entity.html#ae1ba7d9945c1923868d8875382a90cb8">NobleCore::Entity::Entity</a></div><div class="ttdeci">Entity(unsigned int _ID)</div><div class="ttdef"><b>Definition:</b> Entity.hpp:24</div></div>
 <div class="ttc" id="astruct_noble_core_1_1_entity_html"><div class="ttname"><a href="struct_noble_core_1_1_entity.html">NobleCore::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:11</div></div>

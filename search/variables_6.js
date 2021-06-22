@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['resourcepath_124',['resourcePath',['../struct_noble_core_1_1_resource.html#a8fe3d48cc262db5615330e2e6721df9b',1,'NobleCore::Resource']]],
-  ['resources_125',['resources',['../struct_noble_core_1_1_resource_manager.html#a5fff8873f722a660329993144cf16961',1,'NobleCore::ResourceManager']]],
-  ['rotation_126',['rotation',['../struct_noble_components_1_1_static_transform.html#a54da25ce6216e42f54842cec5c565a47',1,'NobleComponents::StaticTransform::rotation()'],['../struct_noble_components_1_1_transform.html#ab08f9899eeeaec77eef3f8276f664713',1,'NobleComponents::Transform::rotation()']]]
+  ['maincam_203',['mainCam',['../class_noble_core_1_1_application.html#a305786a8618433c0e09ef0af89721ed7',1,'NobleCore::Application']]],
+  ['mass_204',['mass',['../struct_noble_components_1_1_physics_body.html#a94397b64f981dcefc82862e433371a25',1,'NobleComponents::PhysicsBody']]],
+  ['model_205',['model',['../struct_noble_components_1_1_physics_body.html#a8238d723552a189443dd4c08dce46c91',1,'NobleComponents::PhysicsBody::model()'],['../struct_noble_components_1_1_static_transform.html#a8c5b4bf84214d0609d5d56e67ac2d5c0',1,'NobleComponents::StaticTransform::model()'],['../struct_noble_components_1_1_transform.html#a3ff0ed9052282c799ce6c9e828426569',1,'NobleComponents::Transform::model()']]],
+  ['mousex_206',['mouseX',['../class_noble_core_1_1_input_manager.html#a8b232186ea2f8ef4516bea0b9f550e26',1,'NobleCore::InputManager']]]
 ];

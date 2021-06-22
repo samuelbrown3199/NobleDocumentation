@@ -76,41 +76,44 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>NobleCore</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_screen.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_screen.html">Screen</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>Renderer;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> std::string windowName;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> screenWidth;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> screenHeight;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">static</span> SDL_Window* window;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_noble_core_1_1_screen.html#aef2a5b01991ba4b0e331c3296669c6c0">Screen</a>(std::string _windowName, <span class="keywordtype">int</span> _width, <span class="keywordtype">int</span> _height);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_screen.html#af9b30783c5734a0be516060ed91df931">UpdateScreenSize</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_screen.html#a43ee354e8d55b4e08529a1ef7f4057ab">SetWindowFullScreen</a>(Uint32 _flags);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_noble_core_1_1_screen.html#acdf8f4f1987ed717802118934e3145cd">GetWindowName</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_noble_core_1_1_screen.html#ac00a517af70b1dd0cde7a1a6de84f9b1">GetScreenWidth</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_noble_core_1_1_screen.html#ac613d1e58741a8222a1dc2cd2f49b8d8">GetScreenHeight</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static</span> SDL_Window* <a class="code" href="class_noble_core_1_1_screen.html#aedef6e47a96aa29f5dc3e6603b7c1ae6">GetWindow</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;glm/ext.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>NobleCore</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_noble_core_1_1_screen.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_noble_core_1_1_screen.html">Screen</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>Renderer;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">static</span> std::string windowName;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> screenWidth;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> screenHeight;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">static</span> SDL_Window* window;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_noble_core_1_1_screen.html#aef2a5b01991ba4b0e331c3296669c6c0">Screen</a>(std::string _windowName, <span class="keywordtype">int</span> _width, <span class="keywordtype">int</span> _height);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_screen.html#af9b30783c5734a0be516060ed91df931">UpdateScreenSize</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_noble_core_1_1_screen.html#a43ee354e8d55b4e08529a1ef7f4057ab">SetWindowFullScreen</a>(Uint32 _flags);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_noble_core_1_1_screen.html#acdf8f4f1987ed717802118934e3145cd">GetWindowName</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_noble_core_1_1_screen.html#ac00a517af70b1dd0cde7a1a6de84f9b1">GetScreenWidth</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_noble_core_1_1_screen.html#ac613d1e58741a8222a1dc2cd2f49b8d8">GetScreenHeight</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">static</span> SDL_Window* <a class="code" href="class_noble_core_1_1_screen.html#aedef6e47a96aa29f5dc3e6603b7c1ae6">GetWindow</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_noble_core_1_1_screen_html"><div class="ttname"><a href="class_noble_core_1_1_screen.html">NobleCore::Screen</a></div><div class="ttdef"><b>Definition:</b> Screen.h:14</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_screen_html_acdf8f4f1987ed717802118934e3145cd"><div class="ttname"><a href="class_noble_core_1_1_screen.html#acdf8f4f1987ed717802118934e3145cd">NobleCore::Screen::GetWindowName</a></div><div class="ttdeci">static std::string GetWindowName()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:34</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_screen_html_aedef6e47a96aa29f5dc3e6603b7c1ae6"><div class="ttname"><a href="class_noble_core_1_1_screen.html#aedef6e47a96aa29f5dc3e6603b7c1ae6">NobleCore::Screen::GetWindow</a></div><div class="ttdeci">static SDL_Window * GetWindow()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:49</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_screen_html_a43ee354e8d55b4e08529a1ef7f4057ab"><div class="ttname"><a href="class_noble_core_1_1_screen.html#a43ee354e8d55b4e08529a1ef7f4057ab">NobleCore::Screen::SetWindowFullScreen</a></div><div class="ttdeci">static void SetWindowFullScreen(Uint32 _flags)</div><div class="ttdef"><b>Definition:</b> Screen.cpp:29</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_screen_html_ac00a517af70b1dd0cde7a1a6de84f9b1"><div class="ttname"><a href="class_noble_core_1_1_screen.html#ac00a517af70b1dd0cde7a1a6de84f9b1">NobleCore::Screen::GetScreenWidth</a></div><div class="ttdeci">static int GetScreenWidth()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:39</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html"><div class="ttname"><a href="class_noble_core_1_1_screen.html">NobleCore::Screen</a></div><div class="ttdef"><b>Definition:</b> Screen.h:17</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html_acdf8f4f1987ed717802118934e3145cd"><div class="ttname"><a href="class_noble_core_1_1_screen.html#acdf8f4f1987ed717802118934e3145cd">NobleCore::Screen::GetWindowName</a></div><div class="ttdeci">static std::string GetWindowName()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:31</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html_aedef6e47a96aa29f5dc3e6603b7c1ae6"><div class="ttname"><a href="class_noble_core_1_1_screen.html#aedef6e47a96aa29f5dc3e6603b7c1ae6">NobleCore::Screen::GetWindow</a></div><div class="ttdeci">static SDL_Window * GetWindow()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:46</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html_a43ee354e8d55b4e08529a1ef7f4057ab"><div class="ttname"><a href="class_noble_core_1_1_screen.html#a43ee354e8d55b4e08529a1ef7f4057ab">NobleCore::Screen::SetWindowFullScreen</a></div><div class="ttdeci">static void SetWindowFullScreen(Uint32 _flags)</div><div class="ttdef"><b>Definition:</b> Screen.cpp:26</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html_ac00a517af70b1dd0cde7a1a6de84f9b1"><div class="ttname"><a href="class_noble_core_1_1_screen.html#ac00a517af70b1dd0cde7a1a6de84f9b1">NobleCore::Screen::GetScreenWidth</a></div><div class="ttdeci">static int GetScreenWidth()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:36</div></div>
 <div class="ttc" id="aclass_noble_core_1_1_screen_html_af9b30783c5734a0be516060ed91df931"><div class="ttname"><a href="class_noble_core_1_1_screen.html#af9b30783c5734a0be516060ed91df931">NobleCore::Screen::UpdateScreenSize</a></div><div class="ttdeci">static void UpdateScreenSize()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:20</div></div>
 <div class="ttc" id="aclass_noble_core_1_1_screen_html_aef2a5b01991ba4b0e331c3296669c6c0"><div class="ttname"><a href="class_noble_core_1_1_screen.html#aef2a5b01991ba4b0e331c3296669c6c0">NobleCore::Screen::Screen</a></div><div class="ttdeci">Screen(std::string _windowName, int _width, int _height)</div><div class="ttdef"><b>Definition:</b> Screen.cpp:13</div></div>
-<div class="ttc" id="aclass_noble_core_1_1_screen_html_ac613d1e58741a8222a1dc2cd2f49b8d8"><div class="ttname"><a href="class_noble_core_1_1_screen.html#ac613d1e58741a8222a1dc2cd2f49b8d8">NobleCore::Screen::GetScreenHeight</a></div><div class="ttdeci">static int GetScreenHeight()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:44</div></div>
+<div class="ttc" id="aclass_noble_core_1_1_screen_html_ac613d1e58741a8222a1dc2cd2f49b8d8"><div class="ttname"><a href="class_noble_core_1_1_screen.html#ac613d1e58741a8222a1dc2cd2f49b8d8">NobleCore::Screen::GetScreenHeight</a></div><div class="ttdeci">static int GetScreenHeight()</div><div class="ttdef"><b>Definition:</b> Screen.cpp:41</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

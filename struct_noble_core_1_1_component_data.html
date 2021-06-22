@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="struct_noble_core_1_1_component_data-members.html">List of all members</a>  </div>
@@ -78,6 +79,13 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a782cf999d40f64102c01f8f79895a6b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_component_data.html#a782cf999d40f64102c01f8f79895a6b0">OnInitialize</a> ()</td></tr>
+<tr class="separator:a782cf999d40f64102c01f8f79895a6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a035dba09d76b5b976f0b22b1315ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_component_data.html#a68a035dba09d76b5b976f0b22b1315ad">OnRemove</a> ()</td></tr>
+<tr class="separator:a68a035dba09d76b5b976f0b22b1315ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad706c12211ca753f4053596357421679"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_noble_core_1_1_component_data.html#ad706c12211ca753f4053596357421679">entityID</a></td></tr>
@@ -95,7 +103,68 @@ Static Public Attributes</h2></td></tr>
 struct NobleCore::ComponentData&lt; T &gt;</h3>
 
 <p>The parent struct of all component types. Create your own component types by inheriting from this, for example struct Transform : public <a class="el" href="struct_noble_core_1_1_component_data.html">ComponentData&lt;Transform&gt;</a>. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a782cf999d40f64102c01f8f79895a6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782cf999d40f64102c01f8f79895a6b0">&#9670;&nbsp;</a></span>OnInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="struct_noble_core_1_1_component_data.html">NobleCore::ComponentData</a>&lt; T &gt;::OnInitialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This can be used to create initialisation functions for components. </p>
+
+<p>Reimplemented in <a class="el" href="struct_noble_components_1_1_transform.html#ac5dad30e722a1168a24187213e7218b1">NobleComponents::Transform</a>, and <a class="el" href="struct_noble_components_1_1_static_transform.html#a09811dcda0b9a57d45caca8636b54644">NobleComponents::StaticTransform</a>.</p>
+
+</div>
+</div>
+<a id="a68a035dba09d76b5b976f0b22b1315ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a035dba09d76b5b976f0b22b1315ad">&#9670;&nbsp;</a></span>OnRemove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="struct_noble_core_1_1_component_data.html">NobleCore::ComponentData</a>&lt; T &gt;::OnRemove </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is used when deleting component data. Useful for cleaning up memory etc. </p>
+
+<p>Reimplemented in <a class="el" href="struct_noble_components_1_1_physics_body.html#aa60b1720dbadb4c14b1c3a4821907401">NobleComponents::PhysicsBody</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a55592d07d21074f27be525de11a6f609"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55592d07d21074f27be525de11a6f609">&#9670;&nbsp;</a></span>componentData</h2>
 
